@@ -1,13 +1,26 @@
 Package: geographyoffashion
-Title: What the Package Does (One Line, Title Case)
+Title: Compendium Package for Mapping the Spaces and Networks of the Fashion Industry
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
+Authors@R: c(
+    person(given = "Ate",
+           family = "Poorthuis",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph)
+           email = "ate_poorthuis@sutd.edu.sg")
+    person(given = "Dominic",
+           family = "Power",
+           role = "aut",
+           email = "dominic.power@su.se")
+    person(given = "Matthew",
+           family = "Zook",
+           role = "aut",
+           email = "zook@uky.edu")
+    )
+Description: This package contains the code and data to reproduce the results and figures from the paper published as 'Attentional Social Media: 
+Mapping the Spaces and Networks of the Fashion Industry' in the Annals of the AAG [TODO - doi link]
 License: MIT + file LICENSE
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
+Imports: bookdown
+Suggests1: devtools
+Suggests2: git2r
