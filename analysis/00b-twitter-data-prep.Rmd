@@ -34,8 +34,9 @@ random_tweets$hex <-reversegeocoder::rg_batch_query(ctx, random_tweets %>% st_co
 hexagons_joined <- random_tweets %>% 
   st_set_geometry(NULL) %>% 
   group_by(hex) %>% 
-  summarise(random = n(), `random-fol` = sum(u_followers_count)) %>% 
+  summarise(random = n(), random_fol = sum(u_followers_count)) %>% 
   right_join(., hexagons_clipped, by = "hex")
+hexagons_joined[1:5,]
 ```
 
 We repeat the join to hexagon procedure for each query in our data. Unfortunately, due to Twitter's T&C we cannot share this raw data here. 
@@ -47,7 +48,7 @@ join_to_grid <- function(file, hexagons) {
   name <- file %>% 
     basename() %>% 
     gsub(pattern = ".csv", replacement = "")
-  name_fol <- paste0(name, "-fol")
+  name_fol <- paste0(name, "_fol")
 
   tweets <- fread(file, select = c("id", "lon", "lat", "created_at", "u_followers_count")) %>% 
     st_as_sf(coords = c("lon", "lat"), crs = 4326) %>% 
@@ -70,8 +71,11 @@ join_with_side_effects <- function(f) {
 pblapply(file_names, function(f) join_with_side_effects(f))
 
 hexagons_joined <- hexagons_joined %>% 
-   mutate_all(replace_na, replace = 0)
+  mutate_all(replace_na, replace = 0) %>% 
+  st_as_sf()
 
 saveRDS(hexagons_joined, here("analysis/data/derived_data/global_hex_joined.rds"))
+
+hexagons_joined[1:5,]
 ```
 

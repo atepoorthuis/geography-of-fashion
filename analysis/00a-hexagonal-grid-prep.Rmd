@@ -34,12 +34,14 @@ hexagons <- countries %>%
 hexagons_clipped <- countries %>% 
   st_buffer(100) %>% 
   st_intersection(hexagons) %>% 
-  select(hex)
+  select(hex) %>% 
+  group_by(hex) %>% 
+  summarise()
 
 plot(st_geometry(hexagons_clipped))
 ```
 
-The resulting grids are saved in `analysis/data/derived/data`.
+The resulting grids are saved in `analysis/data/derived_data`.
 
 ```{r}
 write_sf(hexagons_clipped, here("analysis/data/derived_data/global_hex_grid.geojson"))

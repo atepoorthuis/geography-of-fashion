@@ -1,0 +1,182 @@
+---
+title: "Group Totals"
+author: "Ate Poorthuis"
+date: "02/09/2019"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(tidyverse)
+library(purrr)
+library(sf)
+library(rlang)
+```
+
+## Group Totals
+
+We now add group totals for the `nationality`, `gender` and `type` variables for each query.
+```{r}
+hexagons_raw_counts <- readRDS(here("analysis/data/derived_data/global_hex_joined.rds")) %>% st_set_geometry(NULL)
+metadata <- fread(here("analysis/data/raw_data/metadata.csv"))
+
+```
+
+Nationalities
+```{r}
+nationalities <- metadata %>% 
+  select(Nationality) %>% 
+  filter(str_length(Nationality) > 0) %>% 
+  distinct() %>% 
+  pull(Nationality)
+
+add_rowsums_nationality <- function (nat) {
+  hits <- metadata %>% 
+    filter(Nationality == nat) %>% 
+    pull(UniqueID) %>% 
+    intersect(., colnames(hexagons_raw_counts))
+  name <- paste0("NAT_", nat)
+  hexagons_raw_counts <<- mutate(hexagons_raw_counts, !!name := rowSums(hexagons_raw_counts[, hits]))
+  invisible(nat)
+}
+
+pblapply(nationalities, function(nat) add_rowsums_nationality(nat))
+hexagons_raw_counts[1:5,]
+```
+
+Gender
+```{r}
+genders <- metadata %>% 
+  select(Gender) %>% 
+  filter(str_length(Gender) > 0) %>% 
+  distinct() %>% 
+  pull(Gender)
+
+add_rowsums_gender <- function (gender) {
+  hits <- metadata %>% 
+    filter(Gender == gender) %>% 
+    pull(UniqueID) %>% 
+    intersect(., colnames(hexagons_raw_counts))
+  name <- paste0("GEN_", gender)
+  hexagons_raw_counts <<- mutate(hexagons_raw_counts, !!name := rowSums(hexagons_raw_counts[, hits]))
+  invisible(gender)
+}
+pblapply(genders, function(gender) add_rowsums_gender(gender))
+hexagons_raw_counts[1:5,]
+```
+
+Type
+```{r}
+types <- metadata %>% 
+  select(Type) %>% 
+  filter(str_length(Type) > 0) %>% 
+  distinct() %>% 
+  pull(Type)
+
+add_rowsums_type <- function (type) {
+  hits <- metadata %>% 
+    filter(Type == type) %>% 
+    pull(UniqueID) %>% 
+    intersect(., colnames(hexagons_raw_counts))
+  name <- paste0("TYPE_", type)
+  hexagons_raw_counts <<- mutate(hexagons_raw_counts, !!name := rowSums(hexagons_raw_counts[, hits]))
+  invisible(type)
+}
+pblapply(types, function(type) add_rowsums_type(type))
+hexagons_raw_counts[1:5,]
+```
+
+```{r}
+file_names <- dir(here("analysis/data/raw_data/twitter/fashion/"), pattern =".*csv", full.names = T)
+raw_columns <- gsub(basename(file_names), pattern = ".csv", replacement = "")
+
+hexagons_raw_counts <- hexagons_raw_counts %>% 
+                          mutate(
+                              total = rowSums(hexagons_raw_counts[, raw_columns]),
+                              total_fol = rowSums(hexagons_raw_counts[, paste0(raw_columns, "_fol")]),
+                              creatives = TYPE_Creatives + TYPE_Designers,
+                              business = TYPE_Executives + TYPE_Associated_companies + TYPE_Fashion2.0 + TYPE_Catalysts + `TYPE_Catalysts-II` + TYPE_Retailers + `TYPE_Retailers-Personal-Names`,
+                              marketing = TYPE_Media + TYPE_Models
+                              )
+
+```
+
+
+```{r}
+random_total <- sum(hexagons_raw_counts$random)
+
+calculate_odds_ratio <- function(phenomenon_i, phenomenon_total, random_i, random_total) {
+  (phenomenon_i / phenomenon_total) / (random_i + 1 / random_total)
+}
+
+calculate_odds_ratio_ci <- function(odds_ratio, phenomenon_i, phenomenon_total, random_i, random_total, z = 1.96) {
+  exp(log(odds_ratio) - z * sqrt(
+      (  1 / (phenomenon_i + 1) +
+         1 / phenomenon_total + 
+         1 / (random_i + 1) + 
+         1 / random_total
+      )
+    )
+  )
+}
+
+map(types, function(type) {
+  name <- paste0("TYPE_", type)
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
+
+map(genders, function(gender) {
+  name <- paste0("GEN_", gender)
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
+
+map(nationalities, function(nat) {
+  name <- paste0("NAT_", nat)
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
+
+map(file_names, function(file) {
+  name <- file %>% 
+    basename() %>% 
+    gsub(pattern = ".csv", replacement = "")
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
+
+
+
+```
