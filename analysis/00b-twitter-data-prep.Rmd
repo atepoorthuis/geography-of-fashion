@@ -1,0 +1,77 @@
+---
+title: "Spatial join between tweets and hexagon grid"
+author: "Ate Poorthuis"
+date: "02/09/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(tidyverse)
+library(data.table)
+library(bit64)
+library(sf)
+library(reversegeocoder)
+library(geojsonio)
+```
+
+## Spatial join between tweets and hexagon grid
+
+Start by reading in the random sample of tweets as well as the clipped hexagons that we created in the previous step. To join tweets to hexagons, we use `reversegeocoder` (https://github.com/atepoorthuis/reversegeocoder) instead of the conventional `sf::st_join` because it is ~10x faster for this particular scenario.
+
+```{r}
+hexagons_clipped <- readRDS(here("analysis/data/derived_data/global_hex_grid.rds"))
+random_tweets <- fread(here("analysis/data/raw_data/twitter/random-sample/fashion-random.csv"), select = c("id", "lon", "lat", "created_at", "u_followers_count")) %>% 
+  st_as_sf(coords = c("lon", "lat"), crs = 4326) %>% 
+  st_transform(st_crs(hexagons_clipped))
+
+hexagons_geojson <- geojson_list(hexagons_clipped) %>% unclass()
+ctx <- reversegeocoder::rg_load_polygons(hexagons_geojson)
+
+random_tweets$hex <-reversegeocoder::rg_batch_query(ctx, random_tweets %>% st_coordinates(), "hex")
+
+hexagons_joined <- random_tweets %>% 
+  st_set_geometry(NULL) %>% 
+  group_by(hex) %>% 
+  summarise(random = n(), `random-fol` = sum(u_followers_count)) %>% 
+  right_join(., hexagons_clipped, by = "hex")
+```
+
+We repeat the join to hexagon procedure for each query in our data. Unfortunately, due to Twitter's T&C we cannot share this raw data here. 
+```{r}
+file_names <- dir(here("analysis/data/raw_data/twitter/fashion/"), pattern =".*csv", full.names = T)
+
+
+join_to_grid <- function(file, hexagons) {
+  name <- file %>% 
+    basename() %>% 
+    gsub(pattern = ".csv", replacement = "")
+  name_fol <- paste0(name, "-fol")
+
+  tweets <- fread(file, select = c("id", "lon", "lat", "created_at", "u_followers_count")) %>% 
+    st_as_sf(coords = c("lon", "lat"), crs = 4326) %>% 
+    st_transform(st_crs(hexagons_clipped))
+  tweets$hex <-reversegeocoder::rg_batch_query(ctx, tweets %>% st_coordinates(), "hex")
+
+  joined <- tweets %>% 
+    st_set_geometry(NULL) %>% 
+    group_by(hex) %>% 
+    summarise(!!name := n(), !!name_fol := sum(u_followers_count)) %>% 
+    right_join(., hexagons, by = "hex")
+  invisible(joined)
+}
+
+join_with_side_effects <- function(f) {
+  hexagons_joined <<- join_to_grid(f, hexagons_joined)
+  invisible(basename(f))
+}
+
+pblapply(file_names, function(f) join_with_side_effects(f))
+
+hexagons_joined <- hexagons_joined %>% 
+   mutate_all(replace_na, replace = 0)
+
+saveRDS(hexagons_joined, here("analysis/data/derived_data/global_hex_joined.rds"))
+```
+

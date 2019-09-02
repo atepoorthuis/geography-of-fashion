@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Create hexagonal global grid"
 author: "Ate Poorthuis"
 date: "02/09/2019"
 output: html_document
@@ -40,6 +40,7 @@ plot(st_geometry(hexagons_clipped))
 ```
 
 The resulting grids are saved in `analysis/data/derived/data`.
+
 ```{r}
 write_sf(hexagons_clipped, here("analysis/data/derived_data/global_hex_grid.geojson"))
 saveRDS(hexagons_clipped, here("analysis/data/derived_data/global_hex_grid.rds"))

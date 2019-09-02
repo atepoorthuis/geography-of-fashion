@@ -1,0 +1,952 @@
+Updated.Search.Term,Original,UniqueID,Type,Gender,Nationality
+"""A.P.C""","""A.P.C""",Associated_companies-001,Associated_companies,ORGANISATION,FRANCE
+"""Shanghai Tang""","""Shanghai Tang""",Associated_companies-002,Associated_companies,ORGANISATION,CHINA
+"""Acne Studios""",Acne Studios,Associated_companies-003,Associated_companies,ORGANISATION,SWEDEN
+Adidas,Adidas,Associated_companies-004,Associated_companies,ORGANISATION,GERMANY
+Agnona,Agnona,Associated_companies-005,Associated_companies,ORGANISATION,ITALY
+Ala•a OR Alaia,Ala•a,Associated_companies-006,Associated_companies,ORGANISATION,FRANCE
+"""Alexander McQueen""",Alexander McQueen,Associated_companies-007,Associated_companies,ORGANISATION,UK
+"""Altuzarra""",Altuzarra,Associated_companies-008,Associated_companies,ORGANISATION,USA
+"""Anrealage""",Anrealage,Associated_companies-009,Associated_companies,ORGANISATION,JAPAN
+"""Balenciaga""",Balenciaga,Associated_companies-010,Associated_companies,ORGANISATION,FRANCE
+"""Balmain""",Balmain,Associated_companies-011,Associated_companies,ORGANISATION,FRANCE
+"""Band of Outsiders""",Band of Outsiders,Associated_companies-012,Associated_companies,ORGANISATION,USA
+"""Belstaff""",Belstaff,Associated_companies-013,Associated_companies,ORGANISATION,UK
+"""Benetton""",Benetton,Associated_companies-014,Associated_companies,ORGANISATION,ITALY
+"""Berluti""",Berluti,Associated_companies-015,Associated_companies,ORGANISATION,FRANCE
+"""Bottega Veneta""",Bottega Veneta,Associated_companies-016,Associated_companies,ORGANISATION,ITALY
+"""Brioni""",Brioni,Associated_companies-017,Associated_companies,ORGANISATION,ITALY
+"""Brooks Brothers""",Brooks Brothers,Associated_companies-018,Associated_companies,ORGANISATION,USA
+"""burberry""",burberry,Associated_companies-019,Associated_companies,ORGANISATION,UK
+"""Calvin Klein""",Calvin Klein,Associated_companies-020,Associated_companies,ORGANISATION,USA
+"""Carven""",Carven,Associated_companies-021,Associated_companies,ORGANISATION,FRANCE
+CŽline OR Celine,CŽline,Associated_companies-022,Associated_companies,ORGANISATION,FRANCE
+"""Chalayan & Vionnet""",Vionnet,Associated_companies-023,Associated_companies,ORGANISATION,FRANCE
+"""Chanel""",Chanel,Associated_companies-024,Associated_companies,ORGANISATION,FRANCE
+"""Charlotte Olympia""","""Charlotte Olympia""",Associated_companies-025,Associated_companies,ORGANISATION,UK
+"""Chloe_""",Chloe_,Associated_companies-026,Associated_companies,ORGANISATION,FRANCE
+"""Comme des Garc_ons"" OR ""Comme des Garcons""",Comme des Garc_ons,Associated_companies-027,Associated_companies,ORGANISATION,FRANCE
+"""CondŽ Nast"" OR ""Conde Nast""",CondŽ Nast,Associated_companies-028,Associated_companies,ORGANISATION,USA
+"""converse""",converse,Associated_companies-029,Associated_companies,ORGANISATION,USA
+"""Creatures of the Wind""",Creatures of the Wind,Associated_companies-030,Associated_companies,ORGANISATION,USA
+"""diesel""",diesel,Associated_companies-031,Associated_companies,ORGANISATION,ITALY
+"""Dior""",Dior,Associated_companies-032,Associated_companies,ORGANISATION,FRANCE
+"""dkny""",dkny,Associated_companies-033,Associated_companies,ORGANISATION,USA
+"""Dolce & Gabbana""",Dolce & Gabbana,Associated_companies-034,Associated_companies,ORGANISATION,ITALY
+"""dunhill""",dunhill,Associated_companies-035,Associated_companies,ORGANISATION,UK
+"""Fabindia""",Fabindia,Associated_companies-036,Associated_companies,ORGANISATION,INDIA
+"""Fendi""",Fendi,Associated_companies-037,Associated_companies,ORGANISATION,ITALY
+"""Ferragamo""",Ferragamo,Associated_companies-038,Associated_companies,ORGANISATION,ITALY
+"""Givenchy""",Givenchy,Associated_companies-039,Associated_companies,ORGANISATION,FRANCE
+"""Gucci""",Gucci,Associated_companies-040,Associated_companies,ORGANISATION,ITALY
+(Hennes AND Mauritz) OR H\&M,H&M,Associated_companies-041,Associated_companies,ORGANISATION,SWEDEN
+"""Herme_s"" OR ""Hermes""",Herme_s,Associated_companies-042,Associated_companies,ORGANISATION,FRANCE
+"""Hood by Air""",Hood by Air,Associated_companies-043,Associated_companies,ORGANISATION,USA
+"""hugo boss""",hugo boss,Associated_companies-044,Associated_companies,ORGANISATION,GERMANY
+"""Imaginex""",Imaginex,Associated_companies-045,Associated_companies,ORGANISATION,CHINA
+"""Inditex""",Inditex,Associated_companies-046,Associated_companies,ORGANISATION,SPAIN
+"""J.Crew"" OR Jcrew",J.Crew,Associated_companies-047,Associated_companies,ORGANISATION,USA
+"""J.W.Anderson""",J.W.Anderson,Associated_companies-048,Associated_companies,ORGANISATION,UK
+"""Jimmy Choo""",Jimmy Choo,Associated_companies-049,Associated_companies,ORGANISATION,UK
+"""Kate Spade""",Kate Spade,Associated_companies-050,Associated_companies,ORGANISATION,USA
+"""kenzo""",kenzo,Associated_companies-051,Associated_companies,ORGANISATION,ITALY
+"""lacoste""",lacoste,Associated_companies-052,Associated_companies,ORGANISATION,FRANCE
+"""Lalesso""",Lalesso,Associated_companies-053,Associated_companies,ORGANISATION,SOUTH AFRICA
+"""Lanvin""",Lanvin,Associated_companies-054,Associated_companies,ORGANISATION,FRANCE
+"""Lanvin""",Lanvin,Associated_companies-055,Associated_companies,ORGANISATION,FRANCE
+"""Louis Vuitton""",Louis Vuitton,Associated_companies-056,Associated_companies,ORGANISATION,FRANCE
+"""lvmh""",lvmh,Associated_companies-057,Associated_companies,ORGANISATION,FRANCE
+"""Marc Jacobs""",Marc Jacobs,Associated_companies-058,Associated_companies,ORGANISATION,USA
+"""Margiela""",Margiela,Associated_companies-059,Associated_companies,ORGANISATION,BELGIUM
+"""marni""",marni,Associated_companies-060,Associated_companies,ORGANISATION,ITALY
+"""Michael Kors""",Michael Kors,Associated_companies-061,Associated_companies,ORGANISATION,USA
+"""Missoni""",Missoni,Associated_companies-062,Associated_companies,ORGANISATION,ITALY
+"""Miu Miu""",Miu Miu,Associated_companies-063,Associated_companies,ORGANISATION,ITALY
+"""Moncler""",Moncler,Associated_companies-064,Associated_companies,ORGANISATION,ITALY
+"""mulberry""",mulberry,Associated_companies-065,Associated_companies,ORGANISATION,UK
+"""Net-a-Porter"" OR netaporter",Net-a-Porter,Associated_companies-066,Associated_companies,ORGANISATION,UK
+"""Nike""",Nike,Associated_companies-067,Associated_companies,ORGANISATION,USA
+"""Nina Ricci""",Nina Ricci,Associated_companies-068,Associated_companies,ORGANISATION,FRANCE
+"""Oscar de la Renta""",Oscar de la Renta,Associated_companies-069,Associated_companies,ORGANISATION,USA
+"""Osklen""",Osklen,Associated_companies-070,Associated_companies,ORGANISATION,BRAZIL
+"""Pierre Cardin""",Pierre Cardin,Associated_companies-071,Associated_companies,ORGANISATION,FRANCE
+"""Prada""",Prada,Associated_companies-072,Associated_companies,ORGANISATION,ITALY
+"""Proenza Schouler""",Proenza Schouler,Associated_companies-073,Associated_companies,ORGANISATION,USA
+"""Raf Simons""",Raf Simons,Associated_companies-074,Associated_companies,ORGANISATION,BELGIUM
+"""Rei Kawakubo""",Rei Kawakubo,Associated_companies-075,Associated_companies,ORGANISATION,JAPAN
+"""rodarte""",rodarte,Associated_companies-076,Associated_companies,ORGANISATION,USA
+"""Sacai""",Sacai,Associated_companies-077,Associated_companies,ORGANISATION,JAPAN
+"""Saint Laurent""",Saint Laurent,Associated_companies-078,Associated_companies,ORGANISATION,FRANCE
+Sass AND Bide,Sass AND Bide,Associated_companies-079,Associated_companies,ORGANISATION,AUSTRALIA
+"""SHOWstudio""",SHOWstudio,Associated_companies-080,Associated_companies,ORGANISATION,UK
+"""Swarovski""",Swarovski,Associated_companies-081,Associated_companies,ORGANISATION,AUSTRIA
+"""Tod's""",Tod's,Associated_companies-082,Associated_companies,ORGANISATION,ITALY
+"""topshop""",topshop,Associated_companies-083,Associated_companies,ORGANISATION,UK
+"""Uniqlo""",Uniqlo,Associated_companies-084,Associated_companies,ORGANISATION,JAPAN
+"""valentino""",valentino,Associated_companies-085,Associated_companies,ORGANISATION,ITALY
+"""Versace""",Versace,Associated_companies-086,Associated_companies,ORGANISATION,ITALY
+"""VictoriaŐs Secret""",VictoriaŐs Secret,Associated_companies-087,Associated_companies,ORGANISATION,USA
+"""Vivienne Westwood""",Vivienne Westwood,Associated_companies-088,Associated_companies,ORGANISATION,UK
+"""wooyoungmi""",wooyoungmi,Associated_companies-089,Associated_companies,ORGANISATION,KOREA
+"ysl OR ""Yves Saint Laurent","ysl OR ""Yves Saint Laurent""",Associated_companies-090,Associated_companies,ORGANISATION,FRANCE
+"""Zegna""",Zegna ,Associated_companies-091,Associated_companies,ORGANISATION,ITALY
+akris,akris,Associated_companies-092,Associated_companies,ORGANISATION,SWITZERLAND
+DSQUARED2,DSQUARED2,Associated_companies-093,Associated_companies,ORGANISATION,ITALY
+AQUAZZURA,AQUAZZURA,Associated_companies-094,Associated_companies,ORGANISATION,ITALY
+"""MANSUR GAVRIEL""","""MANSUR GAVRIEL""",Associated_companies-095,Associated_companies,ORGANISATION,USA
+Moschino,Moschino,Associated_companies-096,Associated_companies,ORGANISATION,ITALY
+DELPOZO,DELPOZO,Associated_companies-097,Associated_companies,ORGANISATION,SPAIN
+SONIA RYKIEL,SONIA RYKIEL,Associated_companies-098,Associated_companies,ORGANISATION,FRANCE
+"""HILLIER BARTLEY""","""HILLIER BARTLEY""",Associated_companies-099,Associated_companies,ORGANISATION,UK
+"""MARQUES ALMEIDA""",MARQUES'ALMEIDA,Associated_companies-100,Associated_companies,ORGANISATION,UK
+E.TAUTZ,E.TAUTZ,Associated_companies-101,Associated_companies,ORGANISATION,UK
+Jacquemus,Jacquemus,Associated_companies-102,Associated_companies,ORGANISATION,FRANCE
+"""AMBUSH DESIGN""","""AMBUSH DESIGN""",Associated_companies-103,Associated_companies,ORGANISATION,JAPAN
+"""Akiko Shinoda""",,Catalysts-001,Catalysts,FEMALE,JAPAN
+"""Alice Ferraz""",,Catalysts-002,Catalysts,FEMALE,BRAZIL
+"""Amanda Parkes""",,Catalysts-003,Catalysts,FEMALE,USA
+"""Brian Phillips""",,Catalysts-004,Catalysts,MALE,USA
+"""Camilla Lowther""",,Catalysts-005,Catalysts,FEMALE,UK
+"""Carmen Busquets""",,Catalysts-006,Catalysts,FEMALE,VENEZUELA
+"""Caroline Rush""",,Catalysts-007,Catalysts,FEMALE,UK
+"""Costanza Pascolato""",,Catalysts-008,Catalysts,FEMALE,BRAZIL
+"""Daria Shapovalova""",,Catalysts-009,Catalysts,FEMALE,UKRAINE
+"""Didier Grumbach""",,Catalysts-010,Catalysts,MALE,FRANCE
+"""Ed Filipowski""",,Catalysts-011,Catalysts,MALE,USA
+"""Edwina McCann""",,Catalysts-012,Catalysts,FEMALE,AUSTRALIA
+"""Erik Torstensson""",,Catalysts-013,Catalysts,MALE,SWEDEN
+"""Faith Kates""",,Catalysts-014,Catalysts,FEMALE,USA
+"""Fern Mallis""",,Catalysts-015,Catalysts,FEMALE,USA
+"""Floriane de Saint Pierre""",,Catalysts-016,Catalysts,FEMALE,FRANCE
+"""Giovanni Testino""",,Catalysts-017,Catalysts,MALE,PERU
+"""Helena Helmersson""",,Catalysts-018,Catalysts,FEMALE,SWEDEN
+"""Ivan Bart""",,Catalysts-019,Catalysts,MALE,USA
+"""Jane Reeve""",,Catalysts-020,Catalysts,FEMALE,UK
+"""Jean-Jacques Picart""",,Catalysts-021,Catalysts,MALE,FRANCE
+"""Jed Root""",,Catalysts-022,Catalysts,MALE,USA
+"""JennŽ Lombardo""",,Catalysts-023,Catalysts,FEMALE,USA
+"""Jens Grede""",,Catalysts-024,Catalysts,MALE,SWEDEN
+"""Jimmy Moffat""",,Catalysts-025,Catalysts,MALE,USA
+"""Joel Wilkenfeld""",,Catalysts-026,Catalysts,MALE,USA
+"""Julie Gilhart""",,Catalysts-027,Catalysts,FEMALE,USA
+"""Kalyani Chawla""",,Catalysts-028,Catalysts,FEMALE,INDIA
+"""Karla Otto""",,Catalysts-029,Catalysts,FEMALE,GERMANY
+"""Keith Baptista""",,Catalysts-030,Catalysts,MALE,USA
+"""Linda Loppa""",,Catalysts-031,Catalysts,FEMALE,BELGIUM
+"""Louise Wilson""",,Catalysts-032,Catalysts,FEMALE,UK
+"""Lulu Kennedy""",,Catalysts-033,Catalysts,FEMALE,UK
+"""Marie-Claire Daveu""",,Catalysts-034,Catalysts,FEMALE,FRANCE
+"""Mazdack Rassi""",,Catalysts-035,Catalysts,MALE,USA
+"""Melvin Chua""",,Catalysts-036,Catalysts,MALE,CHINA
+"""Mesh Chhibber""",,Catalysts-037,Catalysts,MALE,FRANCE
+"""MichŹle Lamy""",,Catalysts-038,Catalysts,FEMALE,FRANCE
+"""MichŹle Montagne""",,Catalysts-039,Catalysts,FEMALE,FRANCE
+"""Monica Mendes""",,Catalysts-040,Catalysts,FEMALE,BRAZIL
+"""Olivier Bourgis""",,Catalysts-041,Catalysts,MALE,FRANCE
+"""Omoyemi Akerele""",,Catalysts-042,Catalysts,FEMALE,NIGERIA
+"""Pauline Su""",,Catalysts-043,Catalysts,FEMALE,CHINA
+"""Paulo Borges""",,Catalysts-044,Catalysts,MALE,BRAZIL
+"""Pierre Rougier""",,Catalysts-045,Catalysts,MALE,USA
+"""Ralph Toledano""",,Catalysts-046,Catalysts,MALE,FRANCE
+"""Robert Ferrell""",,Catalysts-047,Catalysts,MALE,FRANCE
+"""Sarah Doukas""",,Catalysts-048,Catalysts,FEMALE,UK
+"""Sheikha Moza bint Nasser""",,Catalysts-049,Catalysts,FEMALE,QATAR
+"""Shelley Fox""",,Catalysts-050,Catalysts,FEMALE,UK
+"""Simon Collins""",,Catalysts-051,Catalysts,MALE,USA
+"""Simon Lock""",,Catalysts-052,Catalysts,MALE,AUSTRALIA
+"""Simone Cipriani""",,Catalysts-053,Catalysts,MALE,ITALY
+"""Steven Kolb""",,Catalysts-054,Catalysts,MALE,USA
+"""Sunil Sethi""",,Catalysts-055,Catalysts,MALE,INDIA
+"""Susan Sabet""",,Catalysts-056,Catalysts,FEMALE,EGYPT
+"""Svida Alisjahbana""",,Catalysts-057,Catalysts,FEMALE,INDONESIA
+"""Tom Kartsotis""",,Catalysts-058,Catalysts,MALE,USA
+"""Valerie Steele""",,Catalysts-059,Catalysts,FEMALE,USA
+"""Walter Van Beirendonck""",,Catalysts-060,Catalysts,MALE,BELGIUM
+"""Carlo Capasa""",,Catalysts-061,Catalysts,MALE,ITALY
+"""Amina Al Rustamani""",,Catalysts-062,Catalysts,FEMALE,UNITED ARAB EMIRATES
+"""Fabio Piras""",,Catalysts-063,Catalysts,MALE,ITALY
+"""Frances Corner""",,Catalysts-064,Catalysts,FEMALE,UK
+"""Jennifer Powell""",,Catalysts-065,Catalysts,FEMALE,USA
+"""Mizuyo Yoshida""",,Catalysts-066,Catalysts,FEMALE,JAPAN
+"""Zowie Broach""",,Catalysts-067,Catalysts,FEMALE,UK
+"""Japan Fashion Week""",,Catalysts-II-001,Catalysts-II,ORGANISATION,JAPAN
+"""CAMERA NAZIONALE DELLA MODA""",,Catalysts-II-002,Catalysts-II,ORGANISATION,ITALY
+"""Ferraz Moda""",,Catalysts-II-003,Catalysts-II,ORGANISATION,BRAZIL
+"""British Fashion Council""",,Catalysts-II-004,Catalysts-II,ORGANISATION,UK
+"""London Fashion Week""",,Catalysts-II-005,Catalysts-II,ORGANISATION,UK
+"""Kiev Fashion Days""",,Catalysts-II-006,Catalysts-II,ORGANISATION,UKRAINE
+"""FŽdŽration FranŤaise de la Couture""",,Catalysts-II-007,Catalysts-II,ORGANISATION,FRANCE
+"""Australian Fashion Chamber""",,Catalysts-II-008,Catalysts-II,ORGANISATION,AUSTRALIA
+"""Next Models""",,Catalysts-II-009,Catalysts-II,ORGANISATION,USA
+"""Art Partner""",,Catalysts-II-010,Catalysts-II,ORGANISATION,USA
+"""IMG Models""",,Catalysts-II-011,Catalysts-II,ORGANISATION,USA
+"""Camera della Moda""",,Catalysts-II-012,Catalysts-II,ORGANISATION,ITALY
+"""New York Fashion Week""",,Catalysts-II-013,Catalysts-II,ORGANISATION,USA
+"""Polimoda""",,Catalysts-II-014,Catalysts-II,ORGANISATION,ITALY
+"""Fashion East""",,Catalysts-II-015,Catalysts-II,ORGANISATION,UK
+"""Stylehouse Files""",,Catalysts-II-016,Catalysts-II,ORGANISATION,NIGERIA
+"""China Fashion Week""",,Catalysts-II-017,Catalysts-II,ORGANISATION,CHINA
+"""S‹o Paulo Fashion Week""",,Catalysts-II-018,Catalysts-II,ORGANISATION,BRAZIL
+"""Marilyn Agency""",,Catalysts-II-019,Catalysts-II,ORGANISATION,USA
+"""Storm Models""",,Catalysts-II-020,Catalysts-II,ORGANISATION,USA
+Parsons AND Design AND School,,Catalysts-II-021,Catalysts-II,ORGANISATION,USA
+"""Council of Fashion Designers of America"" OR ""cfda""",,Catalysts-II-022,Catalysts-II,ORGANISATION,USA
+"""Fashion Design Council of India""",,Catalysts-II-023,Catalysts-II,ORGANISATION,INDIA
+"""Femina Group""",,Catalysts-II-024,Catalysts-II,ORGANISATION,INDONESIA
+"""Fashion Insititute of Technology""",,Catalysts-II-025,Catalysts-II,ORGANISATION,USA
+"""Aaron de Mey""",,Creatives-001,Creatives,MALE,AUSTRALIA
+"""Alasdair McLellan""",,Creatives-002,Creatives,MALE,UK
+"""Alex Box""",,Creatives-003,Creatives,FEMALE,UK
+"""Alexandre de Betak""",,Creatives-004,Creatives,MALE,FRANCE
+"""Bureau Betak""",,Creatives-005,Creatives,ORGANISATION,FRANCE
+"""Alister Mackie""",,Creatives-006,Creatives,MALE,UK
+"""Anaita Shroff Adajania""",,Creatives-007,Creatives,FEMALE,INDIA
+"""Andrew Bolton""",,Creatives-008,Creatives,MALE,UK
+"""Anita Bitton""",,Creatives-009,Creatives,FEMALE,UK
+"""Anna Trevelyan""",,Creatives-010,Creatives,FEMALE,UK
+"""Anthony Turner""",,Creatives-011,Creatives,MALE,UK
+"""Anya Ziourova""",,Creatives-012,Creatives,FEMALE,RUSSIA
+"""Ashley Brokaw""",,Creatives-013,Creatives,FEMALE,USA
+"""Barbara Nicoli""",,Creatives-014,Creatives,FEMALE,ITALY
+"""Leila Ananna""",,Creatives-015,Creatives,FEMALE,ITALY
+"""Benjamin Bruno""",,Creatives-016,Creatives,MALE,FRANCE
+"""Bharat Sikka""",,Creatives-017,Creatives,MALE,INDIA
+"""Bill Cunningham""",,Creatives-018,Creatives,MALE,USA
+"""Boo George""",,Creatives-019,Creatives,MALE,IRELAND
+"""Bruce Weber""",,Creatives-020,Creatives,MALE,USA
+"""Camilla Nickerson""",,Creatives-021,Creatives,FEMALE,UK
+"""Charlotte Tilbury""",,Creatives-022,Creatives,FEMALE,UK
+"""Chen Man""",,Creatives-023,Creatives,FEMALE,CHINA
+"""Craig McDean""",,Creatives-024,Creatives,MALE,UK
+"""David James""",,Creatives-025,Creatives,MALE,UK
+"""David Sims""",,Creatives-026,Creatives,MALE,UK
+"""Doug Lloyd""",,Creatives-027,Creatives,MALE,USA
+"""Edward Enninful""",,Creatives-028,Creatives,MALE,GHANA
+"""Ellen von Unwerth""",,Creatives-029,Creatives,FEMALE,GERMANY
+"""Etienne Russo""",,Creatives-030,Creatives,MALE,FRANCE
+"""Eugene Souleiman""",,Creatives-031,Creatives,MALE,UK
+"""Eugene Tong""",,Creatives-032,Creatives,MALE,USA
+"""Ezra Petronio""",,Creatives-033,Creatives,MALE,FRANCE
+"""Suzanne Koller""",,Creatives-034,Creatives,FEMALE,FRANCE
+"""Fabien Baron""",,Creatives-035,Creatives,MALE,FRANCE
+"""Francois Nars""",,Creatives-036,Creatives,MALE,FRANCE
+"""FrŽdŽric Sanchez""",,Creatives-037,Creatives,MALE,FRANCE
+"""Giampaolo Sgura""",,Creatives-038,Creatives,MALE,ITALY
+"""GB65""",,Creatives-039,Creatives,MALE,ITALY
+"""Giovanni Bianco""",,Creatives-040,Creatives,MALE,ITALY
+"""George Yabu""",,Creatives-041,Creatives,MALE,CANADA
+"""Glenn Pushelberg""",,Creatives-042,Creatives,MALE,CANADA
+"""Grace Coddington""",,Creatives-043,Creatives,FEMALE,UK
+"""Gucci Westman""",,Creatives-044,Creatives,FEMALE,USA
+"""Guido Palau""",,Creatives-045,Creatives,MALE,UK
+"""Gwena‘l Nicolas""",,Creatives-046,Creatives,MALE,FRANCE
+"""Inez van Lamsweerde""",,Creatives-047,Creatives,FEMALE,NETHERLANDS
+"""Vinoodh Matadin""",,Creatives-048,Creatives,MALE,NETHERLANDS
+"""James Scully""",,Creatives-049,Creatives,MALE,UK/USA
+"""Joe McKenna""",,Creatives-050,Creatives,MALE,UK
+"""John Pfeiffer""",,Creatives-051,Creatives,MALE,USA
+"""Joseph Dirand""",,Creatives-052,Creatives,MALE,FRANCE
+"""Josh Olins""",,Creatives-053,Creatives,MALE,UK
+"""Juergen Teller""",,Creatives-054,Creatives,MALE,GERMANY
+"""Kannon Rajah""",,Creatives-055,Creatives,MALE,AUSTRALIA
+"""Karim Sadli""",,Creatives-056,Creatives,MALE,FRANCE
+"""Karl Templer""",,Creatives-057,Creatives,MALE,UK
+"""Kate Lanphear""",,Creatives-058,Creatives,FEMALE,USA
+"""Kate Phelan""",,Creatives-059,Creatives,FEMALE,UK
+"""Lisa Eldridge""",,Creatives-060,Creatives,FEMALE,AUSTRALIA
+"""Luca Stoppini""",,Creatives-061,Creatives,MALE,ITALY
+"""Lucia Liu""",,Creatives-062,Creatives,FEMALE,CHINA
+"""Lucia Pieroni""",,Creatives-063,Creatives,FEMALE,UK
+"""Malcolm Edwards""",,Creatives-064,Creatives,MALE,UK/USA
+"""Manuela Pavesi""",,Creatives-065,Creatives,FEMALE,ITALY
+"""Mariano Vivanco""",,Creatives-066,Creatives,MALE,PERU
+"""Marie Chaix""",,Creatives-067,Creatives,FEMALE,FRANCE
+"""Marie-AmŽlie SauvŽ""",,Creatives-068,Creatives,FEMALE,FRANCE
+"""Mario Sorrenti""",,Creatives-069,Creatives,MALE,ITALY
+"""Mario Testino""",,Creatives-070,Creatives,MALE,PERU
+"""Masamichi Katayama""",,Creatives-071,Creatives,MALE,JAPAN
+"""Mathias Augustyniak""",,Creatives-072,Creatives,MALE,FRANCE
+"""Michael Amzalag""",,Creatives-073,Creatives,MALE,FRANCE
+"""Maurizio Cattelan""",,Creatives-074,Creatives,MALE,ITALY
+"""Pierpaolo Ferrari""",,Creatives-075,Creatives,MALE,ITALY
+"""Mert Alas""",,Creatives-076,Creatives,MALE,TURKEY
+"""Marcus Piggott""",,Creatives-077,Creatives,MALE,UK
+"""Michel Gaubert""",,Creatives-078,Creatives,MALE,FRANCE
+"""Nick Knight""",,Creatives-079,Creatives,MALE,UK
+"""Odile Gilbert""",,Creatives-080,Creatives,FEMALE,FRANCE
+"""Olivier Rizzo""",,Creatives-081,Creatives,MALE,BELGIUM
+"""Olivier Saillard""",,Creatives-082,Creatives,MALE,FRANCE
+"""Pamela Golbin""",,Creatives-083,Creatives,FEMALE,FRANCE
+"""Panos Yiapanis""",,Creatives-084,Creatives,MALE,GREECE
+"""Paolo Roversi""",,Creatives-085,Creatives,MALE,ITALY
+"""Pascal Dangin""",,Creatives-086,Creatives,MALE,FRANCE
+"""Pat McGrath""",,Creatives-087,Creatives,FEMALE,UK
+"""Patrick Demarchelier""",,Creatives-088,Creatives,MALE,FRANCE
+"""Patrick Li""",,Creatives-089,Creatives,MALE,USA
+"""Peter Lindbergh""",,Creatives-090,Creatives,MALE,GERMANY
+"""Peter Marino""",,Creatives-091,Creatives,MALE,USA
+"""Peter Miles""",,Creatives-092,Creatives,MALE,USA
+"""Peter Philips""",,Creatives-093,Creatives,MALE,GERMANY
+"""RŽmi Paringaux""",,Creatives-094,Creatives,MALE,FRANCE
+"""Robert Storey""",,Creatives-095,Creatives,MALE,UK
+"""Robin Derrick""",,Creatives-096,Creatives,MALE,UK
+"""Ronnie Cooke Newhouse""",,Creatives-097,Creatives,FEMALE,USA
+"""Russell Marsh""",,Creatives-098,Creatives,MALE,UK
+"""Sam Gainsbury""",,Creatives-099,Creatives,FEMALE,UK
+"""Anna Whiting""",,Creatives-100,Creatives,FEMALE,UK
+"""Sam McKnight""",,Creatives-101,Creatives,MALE,UK
+"""Sharif Hamza""",,Creatives-102,Creatives,MALE,UK
+"""Shona Heath""",,Creatives-103,Creatives,FEMALE,UK
+"""Sżlve Sundsbż"" OR ""Solve Sundsbo""",,Creatives-104,Creatives,MALE,NORWAY
+"""Stephen Gan""",,Creatives-105,Creatives,MALE,PHILLIPPINES
+"""Steven Klein""",,Creatives-106,Creatives,MALE,USA
+"""Steven Meisel""",,Creatives-107,Creatives,MALE,USA
+"""Tenzin Wild""",,Creatives-108,Creatives,MALE,USA
+"""Magnus Berger""",,Creatives-109,Creatives,MALE,USA
+"""Terry Richardson""",,Creatives-110,Creatives,MALE,USA
+"""Thierry Dreyfus""",,Creatives-111,Creatives,MALE,FRANCE
+"""Thomas Lenthal""",,Creatives-112,Creatives,MALE,FRANCE
+"""Thomas Lohr""",,Creatives-113,Creatives,MALE,GERMANY
+"""Tim Walker""",,Creatives-114,Creatives,MALE,UK
+"""Trey Laird""",,Creatives-115,Creatives,MALE,USA
+"""Willy Vanderperre""",,Creatives-116,Creatives,MALE,BELGIUM
+"""Yadim""",,Creatives-117,Creatives,MALE,USA
+"""Christopher Simmonds""",,Creatives-118,Creatives,MALE,UK
+"""Franck Durand""",,Creatives-119,Creatives,MALE,FRANCE
+"""Glen Luchford""",,Creatives-120,Creatives,MALE,UK
+"""Gordon von Steiner""",,Creatives-121,Creatives,MALE,CANADA
+"""Harley Weir""",,Creatives-122,Creatives,FEMALE,UK
+"""Jamie Hawkesworth""",,Creatives-123,Creatives,MALE,UK
+"""Katy England""",,Creatives-124,Creatives,FEMALE,UK
+"""Lucia Pica""",,Creatives-125,Creatives,FEMALE,ITALY
+"""Paul Hanlon""",,Creatives-126,Creatives,MALE,UK
+"""Sebastien Perrin""",,Creatives-127,Creatives,MALE,FRANCE
+"""Shay Ashual""",,Creatives-128,Creatives,MALE,USA
+"""Stefan Beckman""",,Creatives-129,Creatives,MALE,USA
+"""Tyrone Lebon""",,Creatives-130,Creatives,MALE,UK
+"""Valentino Garavani"" OR ""Valentino""",,Designers-001,Designers,MALE,UK
+"""Alber Elbaz""",,Designers-002,Designers,MALE,ISRAEL
+"""Alberta Ferretti""",,Designers-003,Designers,FEMALE,ITALY
+"""Alessandra Facchinetti""",,Designers-004,Designers,FEMALE,ITALY
+"""Alexander Wang""",,Designers-005,Designers,MALE,USA
+"""Alexandre Herchcovitch""",,Designers-006,Designers,MALE,BRAZIL
+"""Alexandre Mattiussi""",,Designers-007,Designers,MALE,FRANCE
+"""Alice Heusser""",,Designers-008,Designers,FEMALE,KENYA
+"""Anamika Khanna""",,Designers-009,Designers,FEMALE,INDIA
+"""Angela Missoni""",,Designers-010,Designers,FEMALE,ITALY
+"""Ann Demeulemeester""",,Designers-011,Designers,FEMALE,BELGIUM
+"""Anya Hindmarch""",,Designers-012,Designers,FEMALE,UK
+"""Ashley Olsen""",,Designers-013,Designers,FEMALE,USA
+"""Azzedine Ala•a"" OR ""Azzedine Alaia""",,Designers-014,Designers,MALE,TUNISIA
+"""Benjamin Kirchhoff""",,Designers-015,Designers,MALE,UK
+"""Bruno Pieters""",,Designers-016,Designers,MALE,BELGIUM
+"""Byron Peart""",,Designers-017,Designers,MALE,CANADA
+"""Carol Lim""",,Designers-018,Designers,FEMALE,USA
+"""Carolina Herrera""",,Designers-019,Designers,FEMALE,VENEZUELA
+"""Charlotte Dellal""",,Designers-020,Designers,FEMALE,UK
+"""Chitose Abe""",,Designers-021,Designers,FEMALE,JAPAN
+"""Chris Peters""",,Designers-022,Designers,MALE,USA
+"""Christian Louboutin""",,Designers-023,Designers,MALE,FRANCE
+"""Christophe Lemaire""",,Designers-024,Designers,MALE,FRANCE
+"""Christopher Bailey""",,Designers-025,Designers,MALE,UK
+"""Christopher de Vos""",,Designers-026,Designers,MALE,BELGIUM
+"""Christopher Kane""",,Designers-027,Designers,MALE,UK
+"""Clare Waight Keller""",,Designers-028,Designers,FEMALE,UK
+"""Consuelo Castiglioni""",,Designers-029,Designers,FEMALE,SWITZERLAND
+"""Craig Green""",,Designers-030,Designers,MALE,UK
+"""Dao-Yi Chow""",,Designers-031,Designers,MALE,USA
+"""Delfina Delettrez""",,Designers-032,Designers,FEMALE,ITALY
+"""Dexter Peart""",,Designers-033,Designers,MALE,USA
+"""Diane von Fźrstenberg""",,Designers-034,Designers,FEMALE,USA
+"""Dion Lee""",,Designers-035,Designers,MALE,AUSTRALIA
+"""Dirk Schoenberger""",,Designers-036,Designers,MALE,GERMANY
+"""Domenico Dolce""",,Designers-037,Designers,MALE,ITALY
+"""Donatella Versace""",,Designers-038,Designers,FEMALE,ITALY
+"""Donna Karan""",,Designers-039,Designers,FEMALE,USA
+"""Dries Van Noten""",,Designers-040,Designers,MALE,BELGIUM
+"""Edward Meadham""",,Designers-041,Designers,MALE,UK
+"""Elie Saab""",,Designers-042,Designers,MALE,LEBANON
+"""Erdem Moralio_lu"" OR ""Erdem Moralioglu""",,Designers-043,Designers,MALE,TURKEY/CANADA
+"""Fabio Zambernardi""",,Designers-044,Designers,MALE,ITALY
+"""Felipe Oliveira Baptista""",,Designers-045,Designers,MALE,PORTUGAL
+"""Fernando Jorge""",,Designers-046,Designers,MALE,BRAZIL
+"""Francisco Costa""",,Designers-047,Designers,MALE,BRAZIL
+"""Frida Giannini""",,Designers-048,Designers,FEMALE,ITALY
+"""Gareth Pugh""",,Designers-049,Designers,MALE,UK
+"""Gianvito Rossi""",,Designers-050,Designers,MALE,ITALY
+"""Giorgio Armani""",,Designers-051,Designers,MALE,ITALY
+"""Guillaume Henry""",,Designers-052,Designers,MALE,FRANCE
+"""Haider Ackermann""",,Designers-053,Designers,MALE,COLUMBIA
+"""Hedi Slimane""",,Designers-054,Designers,MALE,FRANCE
+"""Huishan Zhang""",,Designers-055,Designers,MALE,CHINA
+"""Humberto Leon""",,Designers-056,Designers,MALE,USA
+"""Hussein Chalayan""",,Designers-057,Designers,MALE,UK
+"""Iris Van Herpen""",,Designers-058,Designers,FEMALE,NETHERLANDS
+"""Isabel Marant""",,Designers-059,Designers,FEMALE,FRANCE
+"""Jack McCollough""",,Designers-060,Designers,MALE,USA
+"""Jason Wu""",,Designers-061,Designers,MALE,USA
+"""Jean Paul Gaultier""",,Designers-062,Designers,MALE,FRANCE
+"""Jenna Lyons""",,Designers-063,Designers,FEMALE,USA
+"""Jil Sander""",,Designers-064,Designers,FEMALE,GERMANY
+"""John Galliano""",,Designers-065,Designers,MALE,UK
+"""Jonathan Anderson""",,Designers-066,Designers,MALE,UK
+"""Jonathan Saunders""",,Designers-067,Designers,MALE,UK
+"""Jonny Johansson""",,Designers-068,Designers,MALE,SWEDEN
+"""Joseph Altuzarra""",,Designers-069,Designers,MALE,FRANCE
+"""Jun Takahashi""",,Designers-070,Designers,MALE,JAPAN
+"""Junya Watanabe""",,Designers-071,Designers,MALE,JAPAN
+"""Karen Walker""",,Designers-072,Designers,FEMALE,AUSTRALIA
+"""Karl Lagerfeld""",,Designers-073,Designers,MALE,GERMANY
+"""Kate Mulleavy""",,Designers-074,Designers,FEMALE,USA
+"""Katie Hillier""",,Designers-075,Designers,FEMALE,UK
+"""Kim Jones""",,Designers-076,Designers,MALE,UK
+"""Kunihiko Morinaga""",,Designers-077,Designers,MALE,JAPAN
+"""Laura Mulleavy""",,Designers-078,Designers,FEMALE,USA
+"""Lazaro Hernandez""",,Designers-079,Designers,MALE,USA
+"""Manish Arora""",,Designers-080,Designers,MALE,INDIA
+"""Manish Malhotra""",,Designers-081,Designers,MALE,INDIA
+"""Manolo Blahnik""",,Designers-082,Designers,MALE,SPAIN
+"""Marc Jacobs""",,Designers-083,Designers,MALE,USA
+"""Marco Di Vincenzo""",,Designers-084,Designers,MALE,ITALY
+"""Maria Grazia Chiuri"" OR ""Maria Chiuri""",,Designers-085,Designers,FEMALE,ITALY
+"""Mary Katrantzou""",,Designers-086,Designers,FEMALE,GREECE
+"""Mary-Kate Olsen""",,Designers-087,Designers,FEMALE,USA
+"""Masha Ma""",,Designers-088,Designers,FEMALE,CHINA
+"""Maxwell Osborne""",,Designers-089,Designers,MALE,USA
+"""Michael Kors""",,Designers-090,Designers,MALE,USA
+"""Miuccia Prada""",,Designers-091,Designers,FEMALE,ITALY
+"""Narciso Rodriguez""",,Designers-092,Designers,MALE,USA
+"""Neil Barrett""",,Designers-093,Designers,MALE,UK
+"""Nicholas Kirkwood""",,Designers-094,Designers,MALE,GERMANY
+"""Nicola Formichetti""",,Designers-095,Designers,MALE,JAPAN
+"""Nicolas GhesquiŹre"" OR ""Nicolas Ghesquiere""",,Designers-096,Designers,MALE,FRANCE
+"""Olivia Kennaway""",,Designers-097,Designers,FEMALE,SOUTH AFRICA
+"""Olivier Theyskens""",,Designers-098,Designers,MALE,GERMANY
+"""Oscar de la Renta""",,Designers-099,Designers,MALE,DOMINICAN REPUBLIC
+"""Oskar Metsavaht""",,Designers-100,Designers,MALE,BRAZIL
+"""Patricia Viera""",,Designers-101,Designers,FEMALE,BRAZIL
+"""Paul Smith""",,Designers-102,Designers,MALE,UK
+"""Pedro LourenŤo""",,Designers-103,Designers,MALE,BRAZIL
+"""Peter Pilotto""",,Designers-104,Designers,MALE,AUSTRIA
+"""Phillip Lim""",,Designers-105,Designers,MALE,USA
+"""Phoebe Philo""",,Designers-106,Designers,FEMALE,UK
+"""Pierpaolo Piccioli""",,Designers-107,Designers,MALE,ITALY
+"""Prabal Gurung""",,Designers-108,Designers,MALE,NEPAL
+"""Rabih Kayrouz""",,Designers-109,Designers,MALE,LEBANON
+"""Raf Simons""",,Designers-110,Designers,MALE,BELGIUM
+"""Rahul Mishra""",,Designers-111,Designers,MALE,INDIA
+"""Rajesh Pratap Singh""",,Designers-112,Designers,MALE,INDIA
+"""Ralph Lauren""",,Designers-113,Designers,MALE,USA
+"""Rei Kawakubo""",,Designers-114,Designers,FEMALE,JAPAN
+"""Riccardo Tisci""",,Designers-115,Designers,MALE,ITALY
+"""Rick Owens""",,Designers-116,Designers,MALE,USA
+"""Roberto Cavalli""",,Designers-117,Designers,MALE,ITALY
+"""Rohit Bal""",,Designers-118,Designers,MALE,INDIA
+"""Roksanda Ilincic""",,Designers-119,Designers,FEMALE,SERBIA
+"""Sabyasachi Mukherjee""",,Designers-120,Designers,MALE,INDIA
+"""Sandra Choi""",,Designers-121,Designers,FEMALE,UK
+"""Sarah Burton""",,Designers-122,Designers,FEMALE,UK
+"""Scott Sternberg""",,Designers-123,Designers,MALE,USA
+"""Shane Gabier""",,Designers-124,Designers,MALE,USA
+"""Shayne Oliver""",,Designers-125,Designers,MALE,USA
+"""Simone Rocha""",,Designers-126,Designers,FEMALE,ITALY
+"""Stefano Gabbana""",,Designers-127,Designers,MALE,ITALY
+"""Stefano Pilati""",,Designers-128,Designers,MALE,ITALY
+"""Stella Jean""",,Designers-129,Designers,FEMALE,ITALY
+"""Stella McCartney""",,Designers-130,Designers,FEMALE,UK
+"""Stephen Jones""",,Designers-131,Designers,MALE,UK
+"""Stuart Vevers""",,Designers-132,Designers,MALE,UK
+"""Tarun Tahiliani""",,Designers-133,Designers,MALE,INDIA
+"""Thakoon Panichgul""",,Designers-134,Designers,MALE,THAILAND
+"""Thom Browne""",,Designers-135,Designers,MALE,USA
+"""Thomas Tait""",,Designers-136,Designers,MALE,CANADA
+"""Tom Ford""",,Designers-137,Designers,MALE,USA
+"""Tomas Maier""",,Designers-138,Designers,MALE,GERMANY
+"""Tommy Hilfiger""",,Designers-139,Designers,MALE,USA
+"""Tory Burch""",,Designers-140,Designers,FEMALE,USA
+"""Ulyana Sergeenko""",,Designers-141,Designers,FEMALE,RUSSIA
+"""Uma Wang""",,Designers-142,Designers,FEMALE,CHINA
+"""Umit Benan""",,Designers-143,Designers,MALE,TURKEY
+"""Vera Wang""",,Designers-144,Designers,FEMALE,USA
+"""Victoria Beckham""",,Designers-145,Designers,FEMALE,UK
+"""Vika Gazinskaya""",,Designers-146,Designers,FEMALE,RUSSIA
+"""Vivienne Westwood""",,Designers-147,Designers,FEMALE,UK
+"""Woo Young Mi""",,Designers-148,Designers,FEMALE,KOREA
+"""Yohji Yamamoto""",,Designers-149,Designers,MALE,JAPAN
+"""Alessandro Michele""",,Designers-150,Designers,MALE,ITALY
+"""Dean Caten""",,Designers-151,Designers,MALE,CANADA
+"""Dan Caten""",,Designers-152,Designers,MALE,CANADA
+"""Demna Gvasalia""",,Designers-153,Designers,MALE,GEORGIA
+"""Dian Pelangi""",,Designers-154,Designers,FEMALE,INDONESIA
+"""Edgardo Osorio""",,Designers-155,Designers,MALE,COLUMBIA
+"""Floriana Gavriel""",,Designers-156,Designers,FEMALE,GERMANY
+"""Rachel Mansur""",,Designers-157,Designers,FEMALE,USA
+"""Greg Chait""",,Designers-158,Designers,MALE,USA
+"""Jeremy Scott""",,Designers-159,Designers,MALE,USA
+"""Josep Font""",,Designers-160,Designers,MALE,SPAIN
+"""Julie de Libran""",,Designers-161,Designers,FEMALE,FRANCE
+"""Katie Hillier""",,Designers-162,Designers,FEMALE,UK
+"""Luella Bartley""",,Designers-163,Designers,FEMALE,UK
+"""Kym Ellery""",,Designers-164,Designers,FEMALE,AUSTRALIA
+"""Lisa Folawiyo""",,Designers-165,Designers,FEMALE,NIGERIA
+"""Marta Marques""",,Designers-166,Designers,FEMALE,PORTUGAL
+"""Paulo Almeida""",,Designers-167,Designers,MALE,PORTUGAL
+"""Massimo Giorgetti""",,Designers-168,Designers,MALE,ITALY
+"""Olivier Rousteing""",,Designers-169,Designers,MALE,FRANCE
+"""Patrick Grant""",,Designers-170,Designers,MALE,UK
+"""Paul Andrew""",,Designers-171,Designers,MALE,UK
+"""Peter Copping""",,Designers-172,Designers,MALE,UK
+"""Peter Dundas""",,Designers-173,Designers,MALE,SWEDEN
+"""Philipp Plein""",,Designers-174,Designers,MALE,GERMANY
+"""Simon Porte Jacquemus""",,Designers-175,Designers,MALE,FRANCE
+"""StŽphane Ashpool""",,Designers-176,Designers,MALE,FRANCE
+"""Verbal & Yoon""",,Designers-177,Designers,ORGANISATION,JAPAN/KOREA
+"""Xiao Li""",,Designers-178,Designers,FEMALE,CHINA
+"""Adrian Chi-Kong Cheng""",,Executives-001,Executives,MALE,CHINA
+"""Ahmad Al Sayad""",,Executives-002,Executives,MALE,QATAR
+"""Alan Fang""",,Executives-003,Executives,MALE,CHINA
+"""Aldo Bensadoun""",,Executives-004,Executives,MALE,CANADA
+"""Alessandro Benetton""",,Executives-005,Executives,MALE,ITALY
+"""Alex Kuruvilla""",,Executives-006,Executives,MALE,INDIA
+"""Alexis Babeau""",,Executives-007,Executives,MALE,FRANCE
+"""Amancio Ortega Gaona""",,Executives-008,Executives,MALE,SPAIN
+"""Andrew Creighton""",,Executives-009,Executives,MALE,UK
+"""Andrew Rosen""",,Executives-010,Executives,MALE,USA
+"""Andrew Wu""",,Executives-011,Executives,MALE,CHINA
+"""Angela Ahrendts""",,Executives-012,Executives,FEMALE,USA
+"""Antoine Arnault""",,Executives-013,Executives,MALE,FRANCE
+"""Averyl Oates""",,Executives-014,Executives,FEMALE,FRANCE
+"""Axel Dumas""",,Executives-015,Executives,MALE,FRANCE
+"""Balbina Wong""",,Executives-016,Executives,FEMALE,CHINA
+"""Bernard Arnault""",,Executives-017,Executives,MALE,FRANCE
+"""Bernard Fornas""",,Executives-018,Executives,MALE,FRANCE
+"""Blake Mycoskie""",,Executives-019,Executives,MALE,USA
+"""Bonnie Brooks""",,Executives-020,Executives,FEMALE,CANADA
+"""Brunello Cucinelli""",,Executives-021,Executives,MALE,ITALY
+"""Bruno Pavlovsky""",,Executives-022,Executives,MALE,FRANCE
+"""Carlos Jereissati Filho""",,Executives-023,Executives,MALE,BRAZIL
+"""Cem Boyner""",,Executives-024,Executives,MALE,TURKEY
+"""Charles H Townsend""",,Executives-025,Executives,MALE,USA
+"""Christina Ong""",,Executives-026,Executives,FEMALE,SINGAPORE
+"""Christopher Suarez""",,Executives-027,Executives,MALE,UK
+"""Chung Yoo-Kyung""",,Executives-028,Executives,FEMALE,KOREA
+"""Claus-Dietrich Lahrs""",,Executives-029,Executives,MALE,GERMANY
+"""Craig Leavitt""",,Executives-030,Executives,MALE,USA
+"""Darshan Mehta""",,Executives-031,Executives,MALE,BRAZIL
+"""David Briskin""",,Executives-032,Executives,MALE,AUSTRALIA
+"""David Carey""",,Executives-033,Executives,MALE,USA
+"""David Lauren""",,Executives-034,Executives,MALE,USA
+"""Delphine Arnault""",,Executives-035,Executives,FEMALE,FRANCE
+"""Diego Della Valle""",,Executives-036,Executives,MALE,ITALY
+"""Domenico De Sole""",,Executives-037,Executives,MALE,ITALY
+"""Victor K. Fung""",,Executives-038,Executives,MALE,CHINA
+"""Emanuel Chirico""",,Executives-039,Executives,MALE,USA
+"""Fabrizio Cardinali""",,Executives-040,Executives,MALE,ITALY
+"""Ferruccio Ferragamo""",,Executives-041,Executives,MALE,ITALY
+"""Francesca Bellettini""",,Executives-042,Executives,FEMALE,ITALY
+"""FranŤois-Henri Pinault""",,Executives-043,Executives,MALE,FRANCE
+"""Gildo Zegna""",,Executives-044,Executives,MALE,ITALY
+"""Hiroshi Onishi""",,Executives-045,Executives,MALE,JAPAN
+"""Hitoshi Okamoto""",,Executives-046,Executives,MALE,JAPAN
+"""Reema Bandar Al Saud""",,Executives-047,Executives,FEMALE,SAUDI ARABIA
+"""Ian Moir""",,Executives-048,Executives,MALE,SOUTH AFRICA
+"""Isak Andic""",,Executives-049,Executives,MALE,SPAIN
+"""Jacky Xu""",,Executives-050,Executives,MALE,CHINA
+"""James Jebbia""",,Executives-051,Executives,MALE,UK
+"""Jean Touitou""",,Executives-052,Executives,MALE,TUNISIA
+"""Jeff Rudes""",,Executives-053,Executives,MALE,USA
+"""Jennifer Woo""",,Executives-054,Executives,FEMALE,CHINA
+"""Johann Rupert""",,Executives-055,Executives,MALE,SOUTH AFRICA
+"""John D Idol""",,Executives-056,Executives,MALE,USA
+"""Jonathan Akeroyd""",,Executives-057,Executives,MALE,UK
+"""Jonathan Newhouse""",,Executives-058,Executives,MALE,UK
+"""JosŽ Auriemo Neto""",,Executives-059,Executives,MALE,BRAZIL
+"""Khaled Jamil""",,Executives-060,Executives,MALE,RUSSIA
+"""Khalid Al Tayer""",,Executives-061,Executives,MALE,UNITED ARAB EMIRATES
+"""Lee Seo-Hyun""",,Executives-062,Executives,FEMALE,KOREA
+"""Leonid Fridlyand""",,Executives-063,Executives,MALE,RUSSIA
+"""Leonid Strunin""",,Executives-064,Executives,MALE,RUSSIA
+"""Lev Tanju""",,Executives-065,Executives,MALE,UK
+"""Marco Bizzarri""",,Executives-066,Executives,MALE,ITALY
+"""Mark Parker""",,Executives-067,Executives,MALE,USA
+"""Maureen Chiquet""",,Executives-068,Executives,FEMALE,USA
+"""Michael Burke""",,Executives-069,Executives,MALE,FRANCE
+"""Mickey Drexler""",,Executives-070,Executives,MALE,USA
+"""Mikhail Kusnirovich""",,Executives-071,Executives,MALE,RUSSIA
+"""Ekaterina Moiseeva""",,Executives-072,Executives,FEMALE,RUSSIA
+"""Mimi Tang""",,Executives-073,Executives,FEMALE,CHINA
+"""Mohammed Alshaya""",,Executives-074,Executives,MALE,KUWAIT
+"""Mortimer Singer""",,Executives-075,Executives,MALE,USA
+"""Nadja Swarovski""",,Executives-076,Executives,FEMALE,AUSTRIA
+"""Nicky Zimmermann""",,Executives-077,Executives,FEMALE,AUSTRALIA
+"""Simone Zimmermann""",,Executives-078,Executives,FEMALE,AUSTRALIA
+"""Pascaline Wilhelm""",,Executives-079,Executives,FEMALE,FRANCE
+"""Patrick Chalhoub""",,Executives-080,Executives,MALE,UNITED ARAB EMIRATES
+"""Patrick Zhong""",,Executives-081,Executives,MALE,CHINA
+"""Patrizio Bertelli""",,Executives-082,Executives,MALE,ITALY
+"""Patrizio di Marco""",,Executives-083,Executives,MALE,ITALY
+"""Steven Lowy""",,Executives-084,Executives,MALE,AUSTRALIA
+"""Peter Lowy""",,Executives-085,Executives,MALE,AUSTRALIA
+"""Philip Green""",,Executives-086,Executives,MALE,UK
+"""Pierre Alexis Dumas""",,Executives-087,Executives,MALE,FRANCE
+"""Pierre-Yves Roussel""",,Executives-088,Executives,MALE,FRANCE
+"""Pietro Beccari""",,Executives-089,Executives,MALE,ITALY
+"""Raffaello Napoleone""",,Executives-090,Executives,MALE,ITALY
+"""Raphael le Masne de Chermont""",,Executives-091,Executives,MALE,FRANCE
+"""Remo Ruffini""",,Executives-092,Executives,MALE,ITALY
+"""Renzo Rosso""",,Executives-093,Executives,MALE,ITALY
+"""Richard Baker""",,Executives-094,Executives,MALE,USA
+"""Robert Duffy""",,Executives-095,Executives,MALE,USA
+"""Rodrigo Bazan""",,Executives-096,Executives,MALE,ARGENTINA
+"""Sanjay Kapoor""",,Executives-097,Executives,MALE,INDIA
+"""Sebastian Suhl""",,Executives-098,Executives,MALE,USA
+"""SŽbastien Fabre""",,Executives-099,Executives,MALE,FRANCE
+"""Sheikh Abdullah Binzagr""",,Executives-100,Executives,MALE,SAUDI ARABIA
+"""Shirley Cook""",,Executives-101,Executives,FEMALE,USA
+"""Shunichi Sugioka""",,Executives-102,Executives,MALE,JAPAN
+"""Sidney Toledano""",,Executives-103,Executives,MALE,FRANCE/MOROCCO
+"""Silas Chou""",,Executives-104,Executives,MALE,CHINA
+"""Stefan Persson""",,Executives-105,Executives,MALE,SWEDEN
+"""Stefano Sassi""",,Executives-106,Executives,MALE,ITALY
+"""Stuart McCullough""",,Executives-107,Executives,MALE,AUSTRALIA
+"""Tadashi Yanai""",,Executives-108,Executives,MALE,JAPAN
+"""Tamara Mellon""",,Executives-109,Executives,FEMALE,USA
+"""Tikka Shatrujit Singh""",,Executives-110,Executives,MALE,INDIA
+"""Tom Florio""",,Executives-111,Executives,MALE,USA
+"""Tony SalamŽ""",,Executives-112,Executives,MALE,LEBANON
+"""Tos Chirathivat""",,Executives-113,Executives,MALE,THAILAND
+"""Tran Thi Hoai Anh""",,Executives-114,Executives,FEMALE,VIETNAM
+"""Vittorio Radice""",,Executives-115,Executives,MALE,ITALY
+"""Wen Zhou""",,Executives-116,Executives,FEMALE,USA
+"""William Bissell""",,Executives-117,Executives,MALE,INDIA
+"""Wissam Al Mana""",,Executives-118,Executives,MALE,QATAR
+"""Xia Hua""",,Executives-119,Executives,FEMALE,CHINA
+"""Bob Sauerberg""",,Executives-120,Executives,MALE,USA
+"""Caroline Brown""",,Executives-121,Executives,FEMALE,USA
+"""Eli Manasseh 'Nash' Benjamin""",,Executives-122,Executives,MALE,SINGAPORE
+"""Jaime Soler Bottinelli""",,Executives-123,Executives,MALE,CHILE
+"""Jay Penske""",,Executives-124,Executives,MALE,USA
+"""Karen Katz""",,Executives-125,Executives,FEMALE,USA
+"""Karl-Johan Persson""",,Executives-126,Executives,MALE,SWEDEN
+"""Matthew Moneypenny""",,Executives-127,Executives,MALE,USA
+"""Pablo Isla Alvarez de Tejera""",,Executives-128,Executives,MALE,SPAIN
+"""Roberto Vedovotto""",,Executives-129,Executives,MALE,ITALY
+"""Allen Yang""",,Fashion2.0-001,Fashion2.0,MALE,CHINA
+"""Andy Dunn""",,Fashion2.0-002,Fashion2.0,MALE,USA
+"""Aslaug Magnusdottir""",,Fashion2.0-003,Fashion2.0,FEMALE,ICELAND
+"""Cathy Beaudoin""",,Fashion2.0-004,Fashion2.0,FEMALE,USA
+"""Chris Kyvetos""",,Fashion2.0-005,Fashion2.0,MALE,AUSTRALIA
+"""Chris Morton""",,Fashion2.0-006,Fashion2.0,MALE,UK
+"""Demet Mutlu""",,Fashion2.0-007,Fashion2.0,FEMALE,TURKEY
+"""Federico Marchetti""",,Fashion2.0-008,Fashion2.0,MALE,ITALY
+"""George Ji Wenhong""",,Fashion2.0-009,Fashion2.0,MALE,CHINA
+"""Ivy Ross""",,Fashion2.0-010,Fashion2.0,FEMALE,USA
+"""Jennifer Hyman""",,Fashion2.0-011,Fashion2.0,FEMALE,USA
+"""John Skelton""",,Fashion2.0-012,Fashion2.0,MALE,UK
+"""Jonathan Ive""",,Fashion2.0-013,Fashion2.0,MALE,UK
+"""JosŽ Neves""",,Fashion2.0-014,Fashion2.0,MALE,PORTUGAL
+"""Joseph Einhorn""",,Fashion2.0-015,Fashion2.0,MALE,USA
+"""Lauren Santo Domingo""",,Fashion2.0-016,Fashion2.0,FEMALE,USA
+"""Mukesh Bansal""",,Fashion2.0-017,Fashion2.0,MALE,INDIA
+"""Natalie Massenet""",,Fashion2.0-018,Fashion2.0,FEMALE,USA
+"""Nick Robertson""",,Fashion2.0-019,Fashion2.0,MALE,UK
+"""Oliver Samwer""",,Fashion2.0-020,Fashion2.0,MALE,GERMANY
+"""Rami Atallah""",,Fashion2.0-021,Fashion2.0,MALE,CANADA
+"""Sophia Amoruso""",,Fashion2.0-022,Fashion2.0,FEMALE,USA
+"""Tom Chapman""",,Fashion2.0-023,Fashion2.0,MALE,UK
+"""Ruth Chapman""",,Fashion2.0-024,Fashion2.0,FEMALE,USA
+"""VIPStore""",,Fashion2.0-025,Fashion2.0,ORGANISATION,CHINA
+"""Sneakerboy""",,Fashion2.0-026,Fashion2.0,ORGANISATION,AUSTRALIA
+"""Trendyol""",,Fashion2.0-027,Fashion2.0,ORGANISATION,TURKEY
+"""Yoox""",,Fashion2.0-028,Fashion2.0,ORGANISATION,ITALY
+"""Moda Operandi""",,Fashion2.0-029,Fashion2.0,ORGANISATION,USA
+"""Myntra""",,Fashion2.0-030,Fashion2.0,ORGANISATION,INDIA
+"""Net-a-Porter"" OR netaporter",,Fashion2.0-031,Fashion2.0,ORGANISATION,USA
+"""asos""",,Fashion2.0-032,Fashion2.0,ORGANISATION,UK
+"""LN-CC""",,Fashion2.0-033,Fashion2.0,ORGANISATION,UK
+"""Rent the Runway""",,Fashion2.0-034,Fashion2.0,ORGANISATION,USA
+"""FarFetch""",,Fashion2.0-035,Fashion2.0,ORGANISATION,PORTUGAL
+"""ssense""",,Fashion2.0-036,Fashion2.0,ORGANISATION,CANADA
+"""Nasty Gal""",,Fashion2.0-037,Fashion2.0,ORGANISATION,USA
+"""MatchesFashion""",,Fashion2.0-038,Fashion2.0,ORGANISATION,UK
+rewardstyle,rewardstyle,Fashion2.0-039,Fashion2.0,ORGANISATION,USA
+ringly,ringly,Fashion2.0-040,Fashion2.0,ORGANISATION,USA
+"""Amber Venz Box""",,Fashion2.0-041,Fashion2.0,FEMALE,USA
+"""Christina Mercando""",,Fashion2.0-042,Fashion2.0,FEMALE,USA
+"""Julie Wainwright""",,Fashion2.0-043,Fashion2.0,FEMALE,USA
+"""Kevin Systrom""",,Fashion2.0-044,Fashion2.0,MALE,USA
+"""Paul Deneve""",,Fashion2.0-045,Fashion2.0,MALE,BELGUIM
+"""ashadedviewonfashion""", ashadedviewonfashion,Media-001,Media,ORGANISATION,USA
+"""Leafgreener""", Leafgreener,Media-002,Media,ORGANISATION,CHINA
+"""CR Fashion""","""CR Fashion""",Media-003,Media,ORGANISATION,FRANCE
+"""HarperŐs Bazaar"" OR ""Harpers Bazaar""","""HarperŐs Bazaar"" OR ""Harpers Bazaar""",Media-004,Media,ORGANISATION,USA
+"""LŐUomo Vogue""","""LŐUomo Vogue""",Media-005,Media,ORGANISATION,ITALY
+"""Mr Porter""","""Mr Porter""",Media-006,Media,ORGANISATION,UK
+"""Shine by Three""","""Shine by Three""",Media-007,Media,ORGANISATION,AUSTRALIA
+"""Style Bubble""","""Style Bubble""",Media-008,Media,ORGANISATION,UK
+"""Tokyo Dandy""","""Tokyo Dandy""",Media-009,Media,ORGANISATION,JAPAN
+"""Trends Media Group""","""Trends Media Group""",Media-010,Media,ORGANISATION,CHINA
+"""Vanity Fair""","""Vanity Fair""",Media-011,Media,ORGANISATION,USA
+"""W Magazine""","""W Magazine""",Media-012,Media,ORGANISATION,USA
+"""Women's Wear Daily""","""Women's Wear Daily""",Media-013,Media,ORGANISATION,USA
+"""032c""",032c,Media-014,Media,ORGANISATION,GERMANY
+"""Alexander Fury""",Alexander Fury,Media-015,Media,MALE,UK
+"""Alexandra Shulman""",Alexandra Shulman,Media-016,Media,FEMALE,UK
+"""Amy Odell""",Amy Odell,Media-017,Media,FEMALE,USA
+"""Angelica Cheung""",Angelica Cheung,Media-018,Media,FEMALE,CHINA
+"""Angelo Flaccavento""",Angelo Flaccavento,Media-019,Media,MALE,ITALY
+"""Anna dello Russo""",Anna dello Russo,Media-020,Media,FEMALE,ITALY
+"""Anna Wintour""",Anna Wintour,Media-021,Media,FEMALE,UK
+"""Ari Seth Cohen""",Ari Seth Cohen,Media-022,Media,MALE,USA
+"""Ariel Foxman""",Ariel Foxman,Media-023,Media,MALE,USA
+"""Babeth Djian""",Babeth Djian,Media-024,Media,FEMALE,FRANCE
+"""Bandana Tewari""",Bandana Tewari,Media-025,Media,FEMALE,INDIA
+"""Bridget Foley""",Bridget Foley,Media-026,Media,FEMALE,USA
+"""Bryan Grey Yambao""",Bryan Grey Yambao,Media-027,Media,MALE,PHILLIPPINES
+"""bryanboy""",bryanboy,Media-028,Media,ORGANISATION,PHILLIPPINES
+"""buro247""",buro247,Media-029,Media,ORGANISATION,RUSSIA
+"""Carine Roitfeld""",Carine Roitfeld,Media-030,Media,FEMALE,FRANCE
+"""Caroline Issa""",Caroline Issa,Media-031,Media,FEMALE,UK
+"""Cathy Horyn""",Cathy Horyn,Media-032,Media,FEMALE,USA
+"""Chiara Ferragni""",Chiara Ferragni,Media-033,Media,FEMALE,ITALY
+"""Colin McDowell""",Colin McDowell,Media-034,Media,MALE,UK
+"""Conde_ Nast""",Conde_ Nast,Media-035,Media,ORGANISATION,USA
+"""Cosmopolitan""",Cosmopolitan,Media-036,Media,ORGANISATION,
+"""Dan Bailey""",Dan Bailey,Media-037,Media,MALE,JAPAN
+"""Dan Peres""",Dan Peres,Media-038,Media,MALE,USA
+"""Daniela Falc‹o""",Daniela Falc‹o,Media-039,Media,FEMALE,BRAZIL
+"""David Vivirido""",David Vivirido,Media-040,Media,MALE,SPAIN
+"""Deborah Needleman""",Deborah Needleman,Media-041,Media,FEMALE,USA
+"""Derek Blasberg""",Derek Blasberg,Media-042,Media,MALE,USA
+"""DŽsirŽe Sadek""",DŽsirŽe Sadek,Media-043,Media,FEMALE,LEBANON
+"""Diane Pernet""",Diane Pernet,Media-044,Media,FEMALE,USA
+"""Dirk Standen""",Dirk Standen,Media-045,Media,MALE,USA
+"""Dylan Jones""",Dylan Jones,Media-046,Media,MALE,UK
+"""Elizabeth Saltzman""",Elizabeth Saltzman,Media-047,Media,FEMALE,USA
+"""Emily Weiss""",Emily Weiss,Media-048,Media,FEMALE,USA
+"""Emmanuelle Alt""",Emmanuelle Alt,Media-049,Media,FEMALE,FRANCE
+"""Erika Palomino""",Erika Palomino,Media-050,Media,FEMALE,BRAZIL
+"""Evelina Khromtchenko""",Evelina Khromtchenko,Media-051,Media,FEMALE,RUSSIA
+"""Franca Sozzani""",Franca Sozzani,Media-052,Media,FEMALE,ITALY
+"""Francesco Sourigues""",Francesco Sourigues,Media-053,Media,MALE,SPAIN
+"""Garance DorŽ""",Garance DorŽ,Media-054,Media,FEMALE,FRANCE
+"""garancedore""",garancedore,Media-055,Media,ORGANISATION,FRANCE
+"""Gentlewoman""",Gentlewoman,Media-056,Media,ORGANISATION,NETHERLANDS
+"""Gert Jonkers""",Gert Jonkers,Media-057,Media,MALE,NETHERLANDS
+"""Ginza Magazine""",Ginza Magazine,Media-058,Media,ORGANISATION,JAPAN
+"""Glenda Bailey""",Glenda Bailey,Media-059,Media,FEMALE,UK
+"""Gloria Kalil""",Gloria Kalil,Media-060,Media,FEMALE,BRAZIL
+"""Godfrey Deeny""",Godfrey Deeny,Media-061,Media,MALE,FRANCE
+"""Gogoboi Ye Si""",Gogoboi Ye Si,Media-062,Media,MALE,CHINA
+"""Hung Huang""",Hung Huang,Media-063,Media,FEMALE,CHINA
+"""hypebeast""",hypebeast,Media-064,Media,ORGANISATION,CHINA
+"""InStyle""",InStyle,Media-065,Media,ORGANISATION,USA
+"""intothegloss""",intothegloss,Media-066,Media,ORGANISATION,USA
+"""jakandjil""",jakandjil,Media-067,Media,ORGANISATION,CANADA
+"""Jamila Halfichi""",Jamila Halfichi,Media-068,Media,FEMALE,UK
+"""Jefferson Hack""",Jefferson Hack,Media-069,Media,MALE,UK
+"""Jeremy Langmead""",Jeremy Langmead,Media-070,Media,MALE,UK
+"""Jessica Michault""",Jessica Michault,Media-071,Media,FEMALE,FRANCE
+"""Jim Nelson""",Jim Nelson,Media-072,Media,MALE,USA
+"""Jo-Ann Furniss""",Jo-Ann Furniss,Media-073,Media,FEMALE,UK
+"""Joe Kazuaki""",Joe Kazuaki,Media-074,Media,MALE,JAPAN
+"""Joe Zee""",Joe Zee,Media-075,Media,MALE,CANADA
+"""Joerg Koch""",Joerg Koch,Media-076,Media,MALE,GERMANY
+"""Jonathan Wingfield""",Jonathan Wingfield,Media-077,Media,MALE,UK
+"""Jop van Bennekom""",Jop van Bennekom,Media-078,Media,MALE,NETHERLANDS
+"""Karchun Leung""",Karchun Leung,Media-079,Media,MALE,CHINA
+"""Katie Grand""",Katie Grand,Media-080,Media,FEMALE,UK
+"""Kelly TalamasNew""",Kelly TalamasNew,Media-081,Media,FEMALE,USA
+"""Kevin Ma""",Kevin Ma,Media-082,Media,MALE,CHINA
+"""Kim Hastreiter""",Kim Hastreiter,Media-083,Media,FEMALE,USA
+"""Kristina O'Neill""",Kristina O'Neill,Media-084,Media,FEMALE,USA
+"""Laurence Bena•m""",Laurence Bena•m,Media-085,Media,FEMALE,FRANCE
+"""Leaf Greener""",Leaf Greener,Media-086,Media,FEMALE,CHINA
+"""Leandra Medine""",Leandra Medine,Media-087,Media,FEMALE,USA
+"""Lilian Pacce""",Lilian Pacce,Media-088,Media,FEMALE,BRAZIL
+"""Lisa Armstrong""",Lisa Armstrong,Media-089,Media,FEMALE,UK
+"""Lorraine Candy""",Lorraine Candy,Media-090,Media,FEMALE,UK
+"""Lynn Yaeger""",Lynn Yaeger,Media-091,Media,FEMALE,USA
+"""manrepeller""",manrepeller,Media-092,Media,ORGANISATION,USA
+"""Margaret Zhang""",Margaret Zhang,Media-093,Media,FEMALE,AUSTRALIA
+"""Miroslava Duma""",Miroslava Duma,Media-094,Media,FEMALE,RUSSIA
+"""Misha Janette""",Misha Janette,Media-095,Media,FEMALE,USA
+"""Mitsuko Watanabe""",Mitsuko Watanabe,Media-096,Media,FEMALE,JAPAN
+"""Nowfashion""",Nowfashion,Media-097,Media,ORGANISATION,FRANCE
+"""Olivier Zahm""",Olivier Zahm,Media-098,Media,MALE,FRANCE
+"""Penny Martin""",Penny Martin,Media-099,Media,FEMALE,UK
+"""Philippe von Borries""",Philippe von Borries,Media-100,Media,MALE,USA
+"""Refinery 29""",Refinery 29,Media-101,Media,ORGANISATION,USA
+"""Robbie Myers""",Robbie Myers,Media-102,Media,FEMALE,USA
+"""Robert Rabensteiner""",Robert Rabensteiner,Media-103,Media,MALE,ITALY
+"""Sara Maino""",Sara Maino,Media-104,Media,FEMALE,ITALY
+"""Sarah Mower""",Sarah Mower,Media-105,Media,FEMALE,UK
+"""sartorialist"" OR ""thesartorialist""",sartorialist OR thesartorialist,Media-106,Media,ORGANISATION,USA
+"""Scott Schuman""",Scott Schuman,Media-107,Media,MALE,USA
+"""Shaway YehNew""",Shaway YehNew,Media-108,Media,FEMALE,CHINA
+"""Stefano Tonchi""",Stefano Tonchi,Media-109,Media,MALE,ITALY
+"""Stephan Moskovic""",Stephan Moskovic,Media-110,Media,MALE,FRANCE
+"""Styledotcom""",Styledotcom,Media-111,Media,ORGANISATION,
+"""Su Mang""",Su Mang,Media-113,Media,FEMALE,CHINA
+"""Susanna Lau""",Susanna Lau,Media-114,Media,FEMALE,UK
+"""Suzy Menkes""",Suzy Menkes,Media-115,Media,FEMALE,UK
+"""theblondesalad""",theblondesalad,Media-116,Media,ORGANISATION,ITALY
+"""Tim Blanks""",Tim Blanks,Media-117,Media,MALE,AUSTRALIA
+"""Tina Leung""",Tina Leung,Media-118,Media,FEMALE,CHINA
+"""tokyofashiondiaries""",tokyofashiondiaries,Media-119,Media,ORGANISATION,USA
+"""Tommy Ton""",Tommy Ton,Media-120,Media,MALE,CANADA
+"""Toshiko Nakashima""",Toshiko Nakashima,Media-121,Media,FEMALE,JAPAN
+"""Vanessa Friedman""",Vanessa Friedman,Media-122,Media,FEMALE,USA
+"""Vanity Fair""",Vanity Fair,Media-123,Media,ORGANISATION,USA
+"""Virginie Mouzat""",Virginie Mouzat,Media-124,Media,FEMALE,FRANCE
+"""Vogue""",Vogue,Media-125,Media,ORGANISATION,
+"""GARY PEPPER GIRL""","""GARY PEPPER GIRL""",Media-126,Media,ORGANISATION,AUSTRALIA
+songofstyle,@songofstyle,Media-127,Media,ORGANISATION,USA
+rewardstyle,rewardstyle,Media-128,Media,ORGANISATION,USA
+"""Aimee Song""","""Aimee Song""",Media-129,Media,FEMALE,USA
+"""Aishwarya Subramanyam""","""Aishwarya Subramanyam""",Media-130,Media,FEMALE,INDIA
+"""Albert Kriemler""","""Albert Kriemler""",Media-131,Media,MALE,SWITZERLAND
+"""Jessica Diehl""","""Jessica Diehl""",Media-132,Media,FEMALE,GERMANY
+"""Kullawit 'Ford' Laosuksri"" OR (Kullawit AND Laosuksri)","""Kullawit 'Ford' Laosuksri""",Media-133,Media,MALE,THAILAND
+"""Matthew Schneier""","""Matthew Schneier""",Media-134,Media,MALE,USA
+"""Mickey Boardman""","""Mickey Boardman""",Media-135,Media,MALE,USA
+"""Nicole Warne""","""Nicole Warne""",Media-136,Media,FEMALE,AUSTRALIA
+"""Sally Singer""","""Sally Singer""",Media-137,Media,FEMALE,USA
+"""Th‡ssia Naves"" OR ""Thassia Naves""","""Th‡ssia Naves"" OR ""Thassia Naves""",Media-138,Media,FEMALE,BRAZIL
+"""Simone Marchetti""","""Simone Marchetti""",Media-139,Media,MALE,ITALY
+"""Tim Lim""","""Tim Lim""",Media-140,Media,MALE,CANADA
+"""Xiao Xue""","""Xiao Xue""",Media-141,Media,FEMALE,CHINA
+"""Alexa Chung""",,Models-001,Models,FEMALE,UK
+"""Alexia Niedzielski""",,Models-002,Models,FEMALE,FRANCE
+"""Elizabeth Von Guttman""",,Models-003,Models,FEMALE,FRANCE
+"""Arizona Muse""",,Models-004,Models,FEMALE,USA
+"""Binx Walton""",,Models-005,Models,FEMALE,USA
+"""Cara Delevingne""",,Models-006,Models,FEMALE,UK
+"""Chlo‘ Sevigny""",,Models-007,Models,FEMALE,USA
+"""Coco Rocha""",,Models-008,Models,FEMALE,CANADA
+"""Daria Werbowy""",,Models-009,Models,FEMALE,UKRAINE
+"""Dasha Zhukova""",,Models-010,Models,FEMALE,RUSSIA
+"""David Beckham""",,Models-011,Models,MALE,UK
+"""David Gandy""",,Models-012,Models,MALE,UK
+"""Edie Campbell""",,Models-013,Models,FEMALE,UK
+"""Fan Bingbing""",,Models-014,Models,FEMALE,CHINA
+"""Fei Fei Sun""",,Models-015,Models,FEMALE,CHINA
+"""Freja Beha Erichsen""",,Models-016,Models,FEMALE,DENMARK
+"""Gisele Bźndchen""",,Models-017,Models,FEMALE,BRAZIL
+"""Helena Bordon""",,Models-018,Models,FEMALE,BRAZIL
+"""Iris Apfel""",,Models-019,Models,FEMALE,USA
+"""Joan Smalls""",,Models-020,Models,FEMALE,PUERTO RICA
+"""Jourdan Dunn""",,Models-021,Models,FEMALE,UK
+"""Julia Nobis""",,Models-022,Models,FEMALE,AUSTRALIA
+"""Kangana Ranaut""",,Models-023,Models,FEMALE,INDIA
+"""Kanye West""",,Models-024,Models,MALE,USA
+"""Karen Elson""",,Models-025,Models,FEMALE,UK
+"""Karlie Kloss""",,Models-026,Models,FEMALE,USA
+"""Kate Moss""",,Models-027,Models,FEMALE,UK
+"""Kendall Jenner""",,Models-028,Models,FEMALE,USA
+"""Kiko Mizuhara""",,Models-029,Models,FEMALE,USA
+"""Liu Wen""",,Models-030,Models,FEMALE,CHINA
+"""Liya Kebede""",,Models-031,Models,FEMALE,ETHIOPIA
+"""Lupita Nyong'o""",,Models-032,Models,FEMALE,KENYA
+"""Margherita Missoni""",,Models-033,Models,FEMALE,ITALY
+"""Miranda Kerr""",,Models-034,Models,FEMALE,AUSTRALIA
+"""Naomi Campbell""",,Models-035,Models,FEMALE,UK
+"""Natalia Vodianova""",,Models-036,Models,FEMALE,RUSSIA
+"""Razane Jammal""",,Models-037,Models,FEMALE,LEBANON
+"""Rinko Kikuchi""",,Models-038,Models,FEMALE,JAPAN
+"""Shala Monroque""",,Models-039,Models,FEMALE,USA
+"""Sonam Kapoor""",,Models-040,Models,FEMALE,INDIA
+"""Sui He""",,Models-041,Models,FEMALE,CHINA
+"""Suki Waterhouse""",,Models-042,Models,FEMALE,UK
+"""Tilda Swinton""",,Models-043,Models,FEMALE,UK
+"""Zhang Ziy""",,Models-044,Models,FEMALE,CHINA
+"""Alicia Vikander""",,Models-045,Models,FEMALE,SWEDEN
+"""Amal Clooney""",,Models-046,Models,FEMALE,LEBANON
+"""Anna Cleveland""",,Models-047,Models,FEMALE,NETHERLANDS
+"""Anna Ewers""",,Models-048,Models,FEMALE,GERMANY
+"""Bhumika Arora""",,Models-049,Models,FEMALE,INDIA
+"""Caitlyn Jenner""",,Models-050,Models,FEMALE,USA
+G-Dragon OR gdragon,,Models-051,Models,MALE,KOREA
+"""Gigi Hadid""",,Models-052,Models,FEMALE,USA
+"""Li Yuchun""",,Models-053,Models,FEMALE,CHINA
+"""Lucky Blue Smith""",,Models-054,Models,MALE,USA
+"""Mademoiselle Yulia""",,Models-055,Models,FEMALE,JAPAN
+"""Mica Arganaraz""",,Models-056,Models,FEMALE,ARGENTINA
+Rihanna,,Models-057,Models,FEMALE,USA
+"""10 Corso Como""",,Retailers-001,Retailers,ORGANISATION,ITALY
+"""Al Ostoura""",,Retailers-002,Retailers,ORGANISATION,KUWAIT
+"""Barneys New York""",,Retailers-003,Retailers,ORGANISATION,USA
+"""Bergdorf Goodman""",,Retailers-004,Retailers,ORGANISATION,USA
+"""Bungalow Eight""",,Retailers-005,Retailers,ORGANISATION,INDIA
+"""DŐNA""",,Retailers-006,Retailers,ORGANISATION,SAUDI ARABIA
+"""Dover Street Market""",,Retailers-007,Retailers,ORGANISATION,UK
+"""Holt Renfrew""",,Retailers-008,Retailers,ORGANISATION,CANADA
+"""L'Eclaireur""",,Retailers-009,Retailers,ORGANISATION,FRANCE
+"""Lane Crawford""",,Retailers-010,Retailers,ORGANISATION,CHINA
+"""le mill""",,Retailers-011,Retailers,ORGANISATION,INDIA
+"""Luisa Via Roma""",,Retailers-012,Retailers,ORGANISATION,ITALY
+"""Merchants on Long""",,Retailers-013,Retailers,ORGANISATION,SOUTH AFRICA
+"""Neiman Marcus""",,Retailers-014,Retailers,ORGANISATION,USA
+"""Nordstrom""",,Retailers-015,Retailers,ORGANISATION,USA
+"""Printemps""",,Retailers-016,Retailers,ORGANISATION,FRANCE
+"""Saks Fifth Avenue""",,Retailers-017,Retailers,ORGANISATION,USA
+"""Selfridges""",,Retailers-018,Retailers,ORGANISATION,UK
+"""United Arrows""",,Retailers-019,Retailers,ORGANISATION,JAPAN
+"""Al-Othman""",,Retailers-020,Retailers,ORGANISATION,KUWAIT
+"""MyTheresa""",,Retailers-021,Retailers,ORGANISATION,GERMANY
+"""La Rinascente""",,Retailers-022,Retailers,ORGANISATION,ITALY
+BABOCHKA,,Retailers-023,Retailers,ORGANISATION,RUSSIA
+"""Adrian Joffe""",,Retailers-Personal-Names-001,Retailers-Personal-Names,MALE,SOUTH AFRICA
+"""Alannah Weston""",,Retailers-Personal-Names-002,Retailers-Personal-Names,FEMALE,CANADA
+"""Alla Verber""",,Retailers-Personal-Names-003,Retailers-Personal-Names,FEMALE,RUSSIA
+"""Andrea Panconesi""",,Retailers-Personal-Names-004,Retailers-Personal-Names,MALE,ITALY
+"""Andrew Keith""",,Retailers-Personal-Names-005,Retailers-Personal-Names,MALE,UK
+"""Armand Hadida""",,Retailers-Personal-Names-006,Retailers-Personal-Names,MALE,FRANCE
+"""Ayo Amusan""",,Retailers-Personal-Names-007,Retailers-Personal-Names,FEMALE,NIGERIA
+"""Carla Sozzani""",,Retailers-Personal-Names-008,Retailers-Personal-Names,FEMALE,ITALY
+"""Cecilia Morelli Parikh""",,Retailers-Personal-Names-009,Retailers-Personal-Names,FEMALE,INDIA
+"""Claire Distenfeld""",,Retailers-Personal-Names-010,Retailers-Personal-Names,FEMALE,USA
+"""Claudio Antonioli""",,Retailers-Personal-Names-011,Retailers-Personal-Names,MALE,ITALY
+"""Deena Aljuhani Abdulaziz""",,Retailers-Personal-Names-012,Retailers-Personal-Names,FEMALE,SAUDI ARABIA
+"""Dennis Freedman""",,Retailers-Personal-Names-013,Retailers-Personal-Names,MALE,USA
+"""Ed Burstell""",,Retailers-Personal-Names-014,Retailers-Personal-Names,MALE,USA
+"""Hanneli Rupert""",,Retailers-Personal-Names-015,Retailers-Personal-Names,FEMALE,SOUTH AFRICA
+"""Hirofumi Kurino""",,Retailers-Personal-Names-016,Retailers-Personal-Names,MALE,JAPAN
+"""Ikram Goldman""",,Retailers-Personal-Names-017,Retailers-Personal-Names,FEMALE,USA
+"""Jeffrey Kalinsky""",,Retailers-Personal-Names-018,Retailers-Personal-Names,MALE,USA
+"""Jim Gold""",,Retailers-Personal-Names-019,Retailers-Personal-Names,MALE,USA
+"""Joan Burstein""",,Retailers-Personal-Names-020,Retailers-Personal-Names,FEMALE,UK
+"""Joshua Shulman""",,Retailers-Personal-Names-021,Retailers-Personal-Names,MALE,USA
+"""Julie Leymarie""",,Retailers-Personal-Names-022,Retailers-Personal-Names,FEMALE,INDIA
+"""Laure Heriard Dubreuil""",,Retailers-Personal-Names-023,Retailers-Personal-Names,FEMALE,FRANCE
+"""Linda Fargo""",,Retailers-Personal-Names-024,Retailers-Personal-Names,FEMALE,USA
+"""Maithili Ahluwalia""",,Retailers-Personal-Names-025,Retailers-Personal-Names,FEMALE,INDIA
+"""Maria Luisa Poumaillou""",,Retailers-Personal-Names-026,Retailers-Personal-Names,FEMALE,VENEZUELA
+"""Marigay McKee""",,Retailers-Personal-Names-027,Retailers-Personal-Names,FEMALE,UK
+"""Mark Derbyshire""",,Retailers-Personal-Names-028,Retailers-Personal-Names,MALE,CANADA
+"""Mark Lee""",,Retailers-Personal-Names-029,Retailers-Personal-Names,MALE,USA
+"""Najla Maatouk""",,Retailers-Personal-Names-030,Retailers-Personal-Names,FEMALE,KUWAIT
+"""Natalie Klein""",,Retailers-Personal-Names-031,Retailers-Personal-Names,FEMALE,BRAZIL
+"""Noor Al-Sabah""",,Retailers-Personal-Names-032,Retailers-Personal-Names,FEMALE,KUWAIT
+"""Paula Reed""",,Retailers-Personal-Names-033,Retailers-Personal-Names,FEMALE,UK
+"""Pete Nordstrom""",,Retailers-Personal-Names-034,Retailers-Personal-Names,MALE,USA
+"""Ron Frasch""",,Retailers-Personal-Names-035,Retailers-Personal-Names,MALE,USA
+"""Sarah Andelman""",,Retailers-Personal-Names-036,Retailers-Personal-Names,FEMALE,FRANCE
+"""Sham Kar Wai""",,Retailers-Personal-Names-037,Retailers-Personal-Names,MALE,CHINA
+"""Tayo Amusan""",,Retailers-Personal-Names-038,Retailers-Personal-Names,MALE,NIGERIA
+"""Tiziana Cardini""",,Retailers-Personal-Names-039,Retailers-Personal-Names,FEMALE,ITALY
+"""Tommy Perse""",,Retailers-Personal-Names-040,Retailers-Personal-Names,MALE,USA
+"""Antonia Giacinti""",,Retailers-Personal-Names-041,Retailers-Personal-Names,FEMALE,ITALY
+"""Maurizio Purificato""",,Retailers-Personal-Names-042,Retailers-Personal-Names,MALE,ITALY
+"""Dato' Farah Khan""",,Retailers-Personal-Names-043,Retailers-Personal-Names,FEMALE,MALAYSIA
+"""Hatulia Avsadjanashvili""",,Retailers-Personal-Names-044,Retailers-Personal-Names,FEMALE,RUSSIA
+"""Johnathan Hanh Nguyen""",,Retailers-Personal-Names-045,Retailers-Personal-Names,MALE,VIETNAM
+"""Le Hong Thuy Tien""",,Retailers-Personal-Names-046,Retailers-Personal-Names,FEMALE,VIETNAM
+"""Justin O'Shea""",,Retailers-Personal-Names-047,Retailers-Personal-Names,MALE,AUSTRALIA
+"""Liliya Rakh""",,Retailers-Personal-Names-048,Retailers-Personal-Names,FEMALE,KAZAKHSTAN
+"""Paola Russo""",,Retailers-Personal-Names-049,Retailers-Personal-Names,FEMALE,USA
+"""Pascaline Smets""",,Retailers-Personal-Names-050,Retailers-Personal-Names,FEMALE,LUXEMBOURG
+"""Reni Folawiyo""",,Retailers-Personal-Names-051,Retailers-Personal-Names,FEMALE,NIGERIA
+"""Tasha Liu""",,Retailers-Personal-Names-052,Retailers-Personal-Names,FEMALE,CHINA
+"""Charles Wang""",,Retailers-Personal-Names-053,Retailers-Personal-Names,MALE,CHINA
+"""Lang Nan""",,Retailers-Personal-Names-054,Retailers-Personal-Names,MALE,CHINA
