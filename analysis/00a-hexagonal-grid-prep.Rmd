@@ -2,9 +2,7 @@
 title: "Create hexagonal global grid"
 author: "Ate Poorthuis"
 date: "02/09/2019"
-output: html_document
-editor_options: 
-  chunk_output_type: console
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -20,7 +18,7 @@ We start by reading in country-level data from Natural Earth. The end-goal is to
 
 ```{r}
 countries <- read_sf(here("analysis/data/raw_data/ne_50m_admin_0_countries/")) %>% 
-  st_transform(CRS("+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"))
+  st_transform(crs = "+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
 plot(st_geometry(countries))
 ```
 
@@ -44,7 +42,7 @@ plot(st_geometry(hexagons_clipped))
 The resulting grids are saved in `analysis/data/derived_data`.
 
 ```{r}
-write_sf(hexagons_clipped, here("analysis/data/derived_data/global_hex_grid.geojson"))
+st_write(hexagons_clipped, here("analysis/data/derived_data/global_hex_grid.geojson"), delete_dsn = T)
 saveRDS(hexagons_clipped, here("analysis/data/derived_data/global_hex_grid.rds"))
 ```
 

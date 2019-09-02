@@ -2,18 +2,19 @@
 title: "Group Totals"
 author: "Ate Poorthuis"
 date: "02/09/2019"
-output: html_document
-editor_options: 
-  chunk_output_type: console
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(here)
+library(data.table)
+library(pbapply)
 library(tidyverse)
 library(purrr)
 library(sf)
 library(rlang)
+library(vegan)
 ```
 
 ## Group Totals
@@ -25,7 +26,7 @@ metadata <- fread(here("analysis/data/raw_data/metadata.csv"))
 
 ```
 
-Nationalities
+### Nationalities
 ```{r}
 nationalities <- metadata %>% 
   select(Nationality) %>% 
@@ -47,7 +48,7 @@ pblapply(nationalities, function(nat) add_rowsums_nationality(nat))
 hexagons_raw_counts[1:5,]
 ```
 
-Gender
+### Gender
 ```{r}
 genders <- metadata %>% 
   select(Gender) %>% 
@@ -68,7 +69,7 @@ pblapply(genders, function(gender) add_rowsums_gender(gender))
 hexagons_raw_counts[1:5,]
 ```
 
-Type
+### Type
 ```{r}
 types <- metadata %>% 
   select(Type) %>% 
@@ -89,6 +90,7 @@ pblapply(types, function(type) add_rowsums_type(type))
 hexagons_raw_counts[1:5,]
 ```
 
+### (Category) Totals 
 ```{r}
 file_names <- dir(here("analysis/data/raw_data/twitter/fashion/"), pattern =".*csv", full.names = T)
 raw_columns <- gsub(basename(file_names), pattern = ".csv", replacement = "")
@@ -104,12 +106,10 @@ hexagons_raw_counts <- hexagons_raw_counts %>%
 
 ```
 
-
+### Odds Ratio
 ```{r}
-random_total <- sum(hexagons_raw_counts$random)
-
 calculate_odds_ratio <- function(phenomenon_i, phenomenon_total, random_i, random_total) {
-  (phenomenon_i / phenomenon_total) / (random_i + 1 / random_total)
+  (phenomenon_i / phenomenon_total) / ((random_i + 1) / random_total)
 }
 
 calculate_odds_ratio_ci <- function(odds_ratio, phenomenon_i, phenomenon_total, random_i, random_total, z = 1.96) {
@@ -123,6 +123,9 @@ calculate_odds_ratio_ci <- function(odds_ratio, phenomenon_i, phenomenon_total, 
   )
 }
 
+random_total <- sum(hexagons_raw_counts$random)
+
+# type
 map(types, function(type) {
   name <- paste0("TYPE_", type)
   phenomenon_total <- sum(hexagons_raw_counts[,name])
@@ -136,6 +139,7 @@ map(types, function(type) {
   invisible(name)
 })
 
+# gender
 map(genders, function(gender) {
   name <- paste0("GEN_", gender)
   phenomenon_total <- sum(hexagons_raw_counts[,name])
@@ -149,6 +153,7 @@ map(genders, function(gender) {
   invisible(name)
 })
 
+# nationalities
 map(nationalities, function(nat) {
   name <- paste0("NAT_", nat)
   phenomenon_total <- sum(hexagons_raw_counts[,name])
@@ -162,6 +167,7 @@ map(nationalities, function(nat) {
   invisible(name)
 })
 
+# all queries
 map(file_names, function(file) {
   name <- file %>% 
     basename() %>% 
@@ -177,6 +183,41 @@ map(file_names, function(file) {
   invisible(name)
 })
 
+# total & category totals
+map(list('total', 'creatives', 'business', 'marketing'), function(name) {
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
 
+# total followers
+random_fol_total <- sum(hexagons_raw_counts$random_fol)
+map(list('total_fol'), function(name) {
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random_fol, random_fol_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random_fol, random_fol_total))
+  invisible(name)
+})
+```
 
+### Diversity metrics
+```{r}
+hexagons_raw_counts <- hexagons_raw_counts %>% 
+                          mutate(
+                              divShannon = vegan::diversity(hexagons_raw_counts[, raw_columns], index = "shannon"),
+                              divSimpson = vegan::diversity(hexagons_raw_counts[, raw_columns], index = "invsimpson")
+                              )
+fwrite(hexagons_raw_counts, here("analysis/data/derived_data/global_hex_join_odds_ratios.csv"))
+saveRDS(hexagons_raw_counts, here("analysis/data/derived_data/global_hex_join_odds_ratios.rds"))
 ```

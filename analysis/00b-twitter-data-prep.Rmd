@@ -2,7 +2,7 @@
 title: "Spatial join between tweets and hexagon grid"
 author: "Ate Poorthuis"
 date: "02/09/2019"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -14,6 +14,7 @@ library(bit64)
 library(sf)
 library(reversegeocoder)
 library(geojsonio)
+library(pbapply)
 ```
 
 ## Spatial join between tweets and hexagon grid
