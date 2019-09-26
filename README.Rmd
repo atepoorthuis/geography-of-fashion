@@ -22,34 +22,32 @@ This repository contains the data and code for our paper:
 
 > Authors, (YYYY). _`r Title`_. Name of journal/book <https://doi.org/xxx/xxx>
 
+The repository contains all the data and code needed to reproduce the results and figures in our paper. Although we are not able to share the raw Twitter data publicly, the aggregated counts per hexagon for each fashion keyword, with which all the results can be reproduced, are found in `analysis/data/derived_data/`. The steps taken to produce this aggregated dataset can be found in:
+- [analysis/00a-hexagonal-grid-prep.Rmd](analysis/00a-hexagonal-grid-prep.md): Preparation of hexagonal global grid
+- [analysis/00b-twitter-data-prep.Rmd](analysis/00b-twitter-data-prep.md): Read in raw Twitter data and perform spatial join to hexagonal grid
+- [analysis/00c-twitter-data-group-totals.Rmd](analysis/00c-twitter-data-group-totals.md): Calculate odds ratios, diversity metrics and group totals for each hexagonal cell
+
+The steps needed to recreate the figures can be found in:
+
 Our pre-print is online here:
 
 > Authors, (YYYY). _`r Title`_. Name of journal/book, Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at <https://doi.org/xxx/xxx>
 
-
-### How to cite
-
-Please cite this compendium as:
-
-> Authors, (`r format(Sys.Date(), "%Y")`). _Compendium of R code and data for `r Title`_. Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at <https://doi.org/xxx/xxx>
-
 ### How to download or install
 
-You can download the compendium as a zip from from this URL: </archive/master.zip>
+You can download the compendium as a zip from from [this URL](https://github.com/atepoorthuis/geography-of-fashion/archive/master.zip).
 
 Or you can install this compendium as an R package, geographyoffashion, from GitHub with:
 
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-remotes::install_github("/")
+remotes::install_github("atepoorthuis/geography-of-fashion")
 ```
 
 
 ### Licenses
 
-**Text and figures :**  [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
+**Text, figures and data:**  [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
 
-**Code :** See the [DESCRIPTION](DESCRIPTION) file
-
-**Data :** [CC-0](http://creativecommons.org/publicdomain/zero/1.0/) attribution requested in reuse
+**Code:** See the [DESCRIPTION](DESCRIPTION) file

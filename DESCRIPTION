@@ -5,18 +5,17 @@ Authors@R: c(
     person(given = "Ate",
            family = "Poorthuis",
            role = c("aut", "cre"),
-           email = "ate_poorthuis@sutd.edu.sg")
+           email = "ate_poorthuis@sutd.edu.sg"),
     person(given = "Dominic",
            family = "Power",
            role = "aut",
-           email = "dominic.power@su.se")
+           email = "dominic.power@su.se"),
     person(given = "Matthew",
            family = "Zook",
            role = "aut",
            email = "zook@uky.edu")
     )
-Description: This package contains the code and data to reproduce the results and figures from the paper published as 'Attentional Social Media: 
-Mapping the Spaces and Networks of the Fashion Industry' in the Annals of the AAG [TODO - doi link]
+Description: This package contains the code and data to reproduce the results and figures from the paper published as 'Attentional Social Media: Mapping the Spaces and Networks of the Fashion Industry' in the Annals of the AAG [TODO - doi link]
 License: MIT + file LICENSE
 ByteCompile: true
 Encoding: UTF-8
@@ -24,3 +23,4 @@ LazyData: true
 Imports: bookdown
 Suggests1: devtools
 Suggests2: git2r
+RoxygenNote: 6.1.1
