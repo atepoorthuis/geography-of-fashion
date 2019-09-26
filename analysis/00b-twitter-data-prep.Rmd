@@ -41,7 +41,7 @@ hexagons_joined[1:5,]
 ```
 
 We repeat the join to hexagon procedure for each query in our data. Unfortunately, due to Twitter's T&C we cannot share this raw data here. 
-```{r}
+```{r, message = FALSE}
 file_names <- dir(here("analysis/data/raw_data/twitter/fashion/"), pattern =".*csv", full.names = T)
 
 
@@ -70,7 +70,9 @@ join_with_side_effects <- function(f) {
 }
 
 pblapply(file_names, function(f) join_with_side_effects(f))
+```
 
+```{r}
 hexagons_joined <- hexagons_joined %>% 
   mutate_all(replace_na, replace = 0) %>% 
   st_as_sf()

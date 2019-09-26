@@ -3,6 +3,8 @@ title: "Figures"
 author: "Ate Poorthuis"
 date: "02/09/2019"
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +14,12 @@ library(sf)
 library(tidyverse)
 library(grid)
 library(gtable)
+library(gridExtra)
 ```
+
+## Introduction
+
+To start creating our figures, we read in two datasets: a spatial datafile (in rds/`sf` format, but can read in from `geojson` or similar as well) and an attribute table containing all the necessary counts and metrics per hexagon. We join the two together based on their common id attribute.
 
 ```{r read data}
 hex_data <- readRDS(here("analysis/data/derived_data/global_hex_join_odds_ratios.rds"))
@@ -23,6 +30,8 @@ hex_union <- hex_sf %>%
   st_buffer(1) %>% 
   summarise(count = n())
 ```
+
+We will create the figures with ggplot. To make them look a little cleaner than the default theme, we overwrite some theme settings. These are mostly global settings but we'll overwrite them as-needed for some specific figures later.
 
 ```{r global settings}
 basecolor <- "#FFF5EB"
@@ -63,32 +72,12 @@ legend <- guide_legend(keyheight = unit(4, units = "mm"),
                   nrow = 1,
                   byrow = T)
 
-## function to annotate legend
-annotate_legend <- function(p, label1, label2) {
-  g <- ggplotGrob(p)
-  leg <- g$grobs[[which(g$layout$name == "guide-box")]]
-  
-  # Construct the label grob 
-  text1 <- textGrob(x = 0.975, label1, gp = gpar(fontsize=9, fontfamily = "Helvetica Neue Thin Italic"), hjust = 1)
-  text2 <- textGrob(x = 0.025, label2, gp = gpar(fontsize=9, fontfamily = "Helvetica Neue Thin Italic"), hjust = 0)
-  height <- unit(1, "grobheight", text1) + unit(5, "points")
-  labelGrob = gTree("labelGrob", children = gList(text1, text2))
-  
-  # Add the label grob to a new row added to the legend
-  pos <- subset(leg$layout, grepl("guides", name), t:r)
-  leg <- gtable_add_rows(leg, height, pos = pos$t+1)
-  leg <- gtable_add_grob(leg, labelGrob, t = pos$t+2, l = pos$l)
-  
-  # Return the modified legend to the origial plot
-  g$grobs[[which(g$layout$name == "guide-box")]] <- leg
-  return(g)
-}
-
 ## color scale
 scale_fill <- scale_fill_manual(values=colors, guide = legend, labels = labels)
 ```
 
 ## Figure 2
+The total attention to fashion world-wide - based on absolute count for all keywords.
 ```{r fig2, fig.height = 5.5, fig.width = 9}
 fig2 <- hex_sf %>% 
   filter(total > 10) %>% 
@@ -102,12 +91,13 @@ fig2 <- hex_sf %>%
   map_theme +
   labs(title = "Total Attention to Fashion", subtitle = "absolute counts for all keywords")
 
-fig2 <- annotate_legend(fig2, label1 = "more attention", label2 = "less attention")
+fig2 <- geographyoffashion::annotate_legend(fig2, label1 = "more attention", label2 = "less attention")
 plot(fig2)
 #ggsave(plot = fig2, filename = "Figure2.pdf", width = 9, height = 5.5, dpi = 600, device = cairo_pdf)
 ```
 
 ## Figure 3
+The relative intensity/attention to fashion world-wide - based on the odds ratio. N.B. we use a random global sample of tweets to calculate the odds ratio here (see manuscript for details).
 ```{r fig3, fig.height = 5.5, fig.width = 9}
 breaks <- c(0, 0.5, 0.8, 1/0.8, 1/0.5, 100000000)
 labels <- c("0", "0.5", "0.8", "1.25", "2+")
@@ -137,10 +127,51 @@ fig3 <- hex_sf %>%
   labs(title = "Total Attention to Fashion", subtitle = "odds ratio for all keywords")
 
 
-fig3 <- annotate_legend(fig3, label1 = "more attention", label2 = "less attention")
+fig3 <- geographyoffashion::annotate_legend(fig3, label1 = "more attention", label2 = "less attention")
 plot(fig3)
 #ggsave(plot = fig3, filename = "Figure3.png", width = 9, height = 5.5, dpi = 600)
 ```
 
+## Figure 4
 
- 
+```{r fig4, fig.height = 16.5, fig.width = 9}
+p1 <- hex_sf %>% 
+  filter(total > 10) %>% 
+  ggplot() +
+  ylim(c(-6000148, 8248865)) + xlim(c(-10097010, 14597010)) +
+  geom_sf(data = hex_union, fill = basecolor, color = NA) +
+  geom_sf(aes(fill = cut(creatives_ORc, breaks=breaks, include.lowest = T)), color = NA) +
+  scale_fill +
+  geom_sf(data = hex_union, fill = NA, color = "gray75", size = 0.1) +
+  coord_sf(datum = NA) +
+  map_theme +
+  labs(title = "Creatives")
+
+p2 <- hex_sf %>% 
+  filter(total > 10) %>% 
+  ggplot() +
+  ylim(c(-6000148, 8248865)) + xlim(c(-10097010, 14597010)) +
+  geom_sf(data = hex_union, fill = basecolor, color = NA) +
+  geom_sf(aes(fill = cut(business_ORc, breaks=breaks, include.lowest = T)), color = NA) +
+  scale_fill +
+  geom_sf(data = hex_union, fill = NA, color = "gray75", size = 0.1) +
+  coord_sf(datum = NA) +
+  map_theme +
+  labs(title = "Business")
+
+p3 <- hex_sf %>% 
+  filter(total > 10) %>% 
+  ggplot() +
+  ylim(c(-6000148, 8248865)) + xlim(c(-10097010, 14597010)) +
+  geom_sf(data = hex_union, fill = basecolor, color = NA) +
+  geom_sf(aes(fill = cut(marketing_ORc, breaks=breaks, include.lowest = T)), color = NA) +
+  scale_fill +
+  geom_sf(data = hex_union, fill = NA, color = "gray75", size = 0.1) +
+  coord_sf(datum = NA) +
+  map_theme +
+  labs(title = "Marketing")
+
+g <- geographyoffashion::grid_arrange_shared_legend(p1, p2, p3)
+plot(g)
+#ggsave(plot = g, filename = "Figure4.png", width = 9, height = 16.5, dpi = 300)
+```

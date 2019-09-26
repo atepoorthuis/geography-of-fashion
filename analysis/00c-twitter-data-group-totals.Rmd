@@ -27,7 +27,7 @@ metadata <- fread(here("analysis/data/raw_data/metadata.csv"))
 ```
 
 ### Nationalities
-```{r}
+```{r, message = FALSE}
 nationalities <- metadata %>% 
   select(Nationality) %>% 
   filter(str_length(Nationality) > 0) %>% 
@@ -49,7 +49,7 @@ hexagons_raw_counts[1:5,]
 ```
 
 ### Gender
-```{r}
+```{r, message = FALSE}
 genders <- metadata %>% 
   select(Gender) %>% 
   filter(str_length(Gender) > 0) %>% 
@@ -70,7 +70,7 @@ hexagons_raw_counts[1:5,]
 ```
 
 ### Type
-```{r}
+```{r, message = FALSE}
 types <- metadata %>% 
   select(Type) %>% 
   filter(str_length(Type) > 0) %>% 
