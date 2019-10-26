@@ -1,7 +1,9 @@
+Type: Compendium
 Package: geographyoffashion
 Title: Compendium Package for Mapping the Spaces and Networks of the Fashion Industry
-Version: 0.0.0.9000
-Authors@R: c(
+Version: 0.0.1
+Authors@R: 
+    c(
     person(given = "Ate",
            family = "Poorthuis",
            role = c("aut", "cre"),
@@ -15,12 +17,31 @@ Authors@R: c(
            role = "aut",
            email = "zook@uky.edu")
     )
-Description: This package contains the code and data to reproduce the results and figures from the paper published as 'Attentional Social Media: Mapping the Spaces and Networks of the Fashion Industry' in the Annals of the AAG [TODO - doi link]
-License: MIT + file LICENSE
-ByteCompile: true
+Description: Compendium Package for Mapping the Spaces and
+    Networks of the Fashion Industry
+License: MIT
+Depends: 
+    bit64,
+    bookdown,
+    data.table,
+    devtools,
+    geographyoffashion,
+    geojsonio,
+    grid,
+    gridExtra,
+    gtable,
+    here,
+    knitr,
+    pbapply,
+    purrr,
+    reversegeocoder,
+    rlang,
+    rmarkdown,
+    roxygen2,
+    sf,
+    tidyverse,
+    vegan
+Remotes: 
+    atepoorthuis/reversegeocoder
 Encoding: UTF-8
 LazyData: true
-Imports: bookdown
-Suggests1: devtools
-Suggests2: git2r
-RoxygenNote: 6.1.1

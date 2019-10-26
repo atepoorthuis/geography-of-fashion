@@ -16,11 +16,12 @@ Title <- "Attentional Social Media: Mapping the Spaces and Networks of the Fashi
 
 # geographyoffashion
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh///master?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/atepoorthuis/geography-of-fashion/master
+?urlpath=rstudio)
 
 This repository contains the data and code for our paper:
 
-> Authors, (YYYY). _`r Title`_. Name of journal/book <https://doi.org/xxx/xxx>
+> Poorthuis, A, D. Power and M. Zook, (2019). _`r Title`_. Annals of the American Association of Geographers <https://doi.org/10.1080/24694452.2019.1664887>
 
 The repository contains all the data and code needed to reproduce the results and figures in our paper. Although we are not able to share the raw Twitter data publicly, the aggregated counts per hexagon for each fashion keyword, with which all the results can be reproduced, are found in `analysis/data/derived_data/`. The steps taken to produce this aggregated dataset can be found in:
 - [analysis/00a-hexagonal-grid-prep.Rmd](analysis/00a-hexagonal-grid-prep.md): Preparation of hexagonal global grid
@@ -29,9 +30,7 @@ The repository contains all the data and code needed to reproduce the results an
 
 The steps needed to recreate the figures can be found in:
 
-Our pre-print is online here:
-
-> Authors, (YYYY). _`r Title`_. Name of journal/book, Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at <https://doi.org/xxx/xxx>
+- [analysis/01-figures-global.Rmd](analysis/01-figures-global.md):
 
 ### How to download or install
 
@@ -39,12 +38,10 @@ You can download the compendium as a zip from from [this URL](https://github.com
 
 Or you can install this compendium as an R package, geographyoffashion, from GitHub with:
 
-
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
 remotes::install_github("atepoorthuis/geography-of-fashion")
 ```
-
 
 ### Licenses
 
