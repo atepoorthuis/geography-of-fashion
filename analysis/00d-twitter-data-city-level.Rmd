@@ -1,0 +1,334 @@
+---
+title: "Create city-level data"
+author: "Ate Poorthuis"
+date: "26/10/2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(tidyverse)
+library(sf)
+library(data.table)
+library(bit64)
+library(reversegeocoder)
+library(geojsonio)
+library(pbapply)
+library(purrr)
+library(rlang)
+library(vegan)
+```
+
+## Create hexagonal city grid.
+
+We start by reading in a shapefile containing the centroid of 10 cities: NY, London, Paris, Milan, Singapore, Frankfurt, Warsaw, Minneapolis, Capetown, Sao Paulo, and Sydney. We then create a 40km buffer around each centroid.
+
+```{r}
+cities <- read_sf(here("analysis/data/raw_data/cities/")) %>% 
+  st_transform(crs = "+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs") %>% 
+  st_buffer(40000)
+plot(st_geometry(cities))
+```
+
+```{r}
+cities_list <- cities %>% pull(city)
+
+create_hexagons <- function(index) {
+  city_name <- cities_list[[index]]
+  cities[index,] %>% 
+    st_make_grid(cellsize = 2500, square = F) %>% 
+    st_sf() %>% 
+    rowid_to_column("id") %>% 
+    mutate(hex = paste(city_name, id, sep = "-"),
+           city = city_name)
+}
+
+hexagons_per_city <- lapply(seq_along(cities_list), create_hexagons)
+plot(st_geometry(hexagons_per_city[[1]]))
+
+hexagons <- do.call(rbind, hexagons_per_city) # bind all city buffers together into single sf object
+```
+
+The resulting grids are saved in `analysis/data/derived_data`.
+
+```{r}
+st_write(hexagons, here("analysis/data/derived_data/cities_hex_grid.geojson"), delete_dsn = T)
+saveRDS(hexagons, here("analysis/data/derived_data/cities_hex_grid.rds"))
+```
+
+## Spatial join between tweets and hexagon grid
+
+Start by reading in the random sample of tweets as well as the clipped hexagons that we created in the previous step. To join tweets to hexagons, we use `reversegeocoder` (https://github.com/atepoorthuis/reversegeocoder) instead of the conventional `sf::st_join` because it is ~10x faster for this particular scenario.
+
+```{r}
+hexagons_clipped <- readRDS(here("analysis/data/derived_data/cities_hex_grid.rds"))
+random_tweets <- fread(here("analysis/data/raw_data/twitter/random-sample/fashion-random-cities.csv"), select = c("id", "lon", "lat", "created_at", "u_followers_count")) %>% 
+  st_as_sf(coords = c("lon", "lat"), crs = 4326) %>% 
+  st_transform(st_crs(hexagons_clipped))
+
+hexagons_geojson <- geojson_list(hexagons_clipped) %>% unclass()
+ctx <- reversegeocoder::rg_load_polygons(hexagons_geojson)
+
+random_tweets$hex <-reversegeocoder::rg_batch_query(ctx, random_tweets %>% st_coordinates(), "hex")
+
+hexagons_joined <- random_tweets %>% 
+  st_set_geometry(NULL) %>% 
+  group_by(hex) %>% 
+  summarise(random = n(), random_fol = sum(u_followers_count)) %>% 
+  right_join(., hexagons_clipped, by = "hex")
+hexagons_joined[1:5,]
+```
+
+
+We repeat the join to hexagon procedure for each query in our data. Unfortunately, due to Twitter's T&C we cannot share this raw data here. 
+```{r, message = FALSE}
+file_names <- dir(here("analysis/data/raw_data/twitter/fashion/"), pattern =".*csv", full.names = T)
+
+
+join_to_grid <- function(file, hexagons) {
+  name <- file %>% 
+    basename() %>% 
+    gsub(pattern = ".csv", replacement = "")
+  name_fol <- paste0(name, "_fol")
+
+  tweets <- fread(file, select = c("id", "lon", "lat", "created_at", "u_followers_count")) %>% 
+    st_as_sf(coords = c("lon", "lat"), crs = 4326) %>% 
+    st_transform(st_crs(hexagons_clipped))
+  tweets$hex <-reversegeocoder::rg_batch_query(ctx, tweets %>% st_coordinates(), "hex")
+  tweets <- tweets %>% 
+    filter(!is.na(hex))
+  
+  if (nrow(tweets) > 0) {
+    joined <- tweets %>% 
+      st_set_geometry(NULL) %>% 
+      group_by(hex) %>% 
+      summarise(!!name := n(), !!name_fol := sum(u_followers_count)) %>% 
+      right_join(., hexagons, by = "hex")
+    invisible(joined)
+  } else {
+    invisible(hexagons)
+  }
+}
+
+join_with_side_effects <- function(f) {
+  hexagons_joined <<- join_to_grid(f, hexagons_joined)
+  invisible(basename(f))
+}
+
+pblapply(file_names, function(f) join_with_side_effects(f))
+```
+
+```{r}
+hexagons_joined <- hexagons_joined %>% 
+  mutate_all(replace_na, replace = 0) %>% 
+  st_as_sf()
+
+saveRDS(hexagons_joined, here("analysis/data/derived_data/cities_hex_joined.rds"))
+
+hexagons_joined[1:5,]
+```
+
+## Group Totals
+
+We now add group totals for the `nationality`, `gender` and `type` variables for each query.
+```{r}
+hexagons_raw_counts <- readRDS(here("analysis/data/derived_data/cities_hex_joined.rds")) %>% st_set_geometry(NULL)
+metadata <- fread(here("analysis/data/raw_data/metadata.csv"))
+
+```
+
+### Nationalities
+```{r, message = FALSE}
+nationalities <- metadata %>% 
+  select(Nationality) %>% 
+  filter(str_length(Nationality) > 0) %>% 
+  distinct() %>% 
+  pull(Nationality)
+
+add_rowsums_nationality <- function (nat) {
+  hits <- metadata %>% 
+    filter(Nationality == nat) %>% 
+    pull(UniqueID) %>% 
+    intersect(., colnames(hexagons_raw_counts))
+  name <- paste0("NAT_", nat)
+  hexagons_raw_counts <<- mutate(hexagons_raw_counts, !!name := rowSums(hexagons_raw_counts[, hits]))
+  invisible(nat)
+}
+
+pblapply(nationalities, function(nat) add_rowsums_nationality(nat))
+hexagons_raw_counts[1:5,]
+```
+
+### Gender
+```{r, message = FALSE}
+genders <- metadata %>% 
+  select(Gender) %>% 
+  filter(str_length(Gender) > 0) %>% 
+  distinct() %>% 
+  pull(Gender)
+
+add_rowsums_gender <- function (gender) {
+  hits <- metadata %>% 
+    filter(Gender == gender) %>% 
+    pull(UniqueID) %>% 
+    intersect(., colnames(hexagons_raw_counts))
+  name <- paste0("GEN_", gender)
+  hexagons_raw_counts <<- mutate(hexagons_raw_counts, !!name := rowSums(hexagons_raw_counts[, hits]))
+  invisible(gender)
+}
+pblapply(genders, function(gender) add_rowsums_gender(gender))
+hexagons_raw_counts[1:5,]
+```
+
+### Type
+```{r, message = FALSE}
+types <- metadata %>% 
+  select(Type) %>% 
+  filter(str_length(Type) > 0) %>% 
+  distinct() %>% 
+  pull(Type)
+
+add_rowsums_type <- function (type) {
+  hits <- metadata %>% 
+    filter(Type == type) %>% 
+    pull(UniqueID) %>% 
+    intersect(., colnames(hexagons_raw_counts))
+  name <- paste0("TYPE_", type)
+  hexagons_raw_counts <<- mutate(hexagons_raw_counts, !!name := rowSums(hexagons_raw_counts[, hits]))
+  invisible(type)
+}
+pblapply(types, function(type) add_rowsums_type(type))
+hexagons_raw_counts[1:5,]
+```
+
+### (Category) Totals 
+```{r}
+file_names <- dir(here("analysis/data/raw_data/twitter/fashion/"), pattern =".*csv", full.names = T)
+raw_columns <- gsub(basename(file_names), pattern = ".csv", replacement = "") %>% 
+  intersect(., colnames(hexagons_raw_counts))
+
+hexagons_raw_counts <- hexagons_raw_counts %>% 
+                          mutate(
+                              total = rowSums(hexagons_raw_counts[, raw_columns]),
+                              total_fol = rowSums(hexagons_raw_counts[, paste0(raw_columns, "_fol")]),
+                              creatives = TYPE_Creatives + TYPE_Designers,
+                              business = TYPE_Executives + TYPE_Associated_companies + TYPE_Fashion2.0 + TYPE_Catalysts + `TYPE_Catalysts-II` + TYPE_Retailers + `TYPE_Retailers-Personal-Names`,
+                              marketing = TYPE_Media + TYPE_Models
+                              )
+
+```
+
+### Odds Ratio
+```{r}
+calculate_odds_ratio <- function(phenomenon_i, phenomenon_total, random_i, random_total) {
+  (phenomenon_i / phenomenon_total) / ((random_i + 1) / random_total)
+}
+
+calculate_odds_ratio_ci <- function(odds_ratio, phenomenon_i, phenomenon_total, random_i, random_total, z = 1.96) {
+  exp(log(odds_ratio) - z * sqrt(
+      (  1 / (phenomenon_i + 1) +
+         1 / phenomenon_total + 
+         1 / (random_i + 1) + 
+         1 / random_total
+      )
+    )
+  )
+}
+
+random_total <- sum(hexagons_raw_counts$random)
+
+# type
+map(types, function(type) {
+  name <- paste0("TYPE_", type)
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
+
+# gender
+map(genders, function(gender) {
+  name <- paste0("GEN_", gender)
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
+
+# nationalities
+map(nationalities, function(nat) {
+  name <- paste0("NAT_", nat)
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
+
+# all queries
+map(raw_columns, function(name) {
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
+
+# total & category totals
+map(list('total', 'creatives', 'business', 'marketing'), function(name) {
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random, random_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random, random_total))
+  invisible(name)
+})
+
+# total followers
+random_fol_total <- sum(hexagons_raw_counts$random_fol)
+map(list('total_fol'), function(name) {
+  phenomenon_total <- sum(hexagons_raw_counts[,name])
+  
+  name_or <-  paste0(name, "_OR")
+  name_orc <- paste0(name, "_ORc")
+  hexagons_raw_counts <<- hexagons_raw_counts %>% 
+    mutate(!!name_or := calculate_odds_ratio(!!as.symbol(name), phenomenon_total, random_fol, random_fol_total),
+           !!name_orc := calculate_odds_ratio_ci(!!as.symbol(name_or), 
+                                                 !!as.symbol(name), phenomenon_total, random_fol, random_fol_total))
+  invisible(name)
+})
+```
+
+### Diversity metrics
+```{r}
+hexagons_raw_counts <- hexagons_raw_counts %>% 
+                          mutate(
+                              divShannon = vegan::diversity(hexagons_raw_counts[, raw_columns], index = "shannon"),
+                              divSimpson = vegan::diversity(hexagons_raw_counts[, raw_columns], index = "invsimpson")
+                              )
+fwrite(hexagons_raw_counts, here("analysis/data/derived_data/cities_hex_join_odds_ratios.csv"))
+saveRDS(hexagons_raw_counts, here("analysis/data/derived_data/cities_hex_join_odds_ratios.rds"))
+```
+

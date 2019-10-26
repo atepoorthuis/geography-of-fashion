@@ -3,15 +3,23 @@
 geographyoffashion
 ==================
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh///master?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/atepoorthuis/geography-of-fashion/master%20?urlpath=rstudio)
 
 This repository contains the data and code for our paper:
 
-> Authors, (YYYY). *Attentional Social Media: Mapping the Spaces and Networks of the Fashion Industry*. Name of journal/book <https://doi.org/xxx/xxx>
+> Poorthuis, A, D. Power and M. Zook, (2019). *Attentional Social Media: Mapping the Spaces and Networks of the Fashion Industry*. Annals of the American Association of Geographers <https://doi.org/10.1080/24694452.2019.1664887>
 
-Our pre-print is online here:
+An interactive version of the maps related to this paper (including all keywords, instead of the limited number of figures in the paper) is available at: <https://geography-of-fashion.netlify.com>. The repository contains all the data and code needed to reproduce the results and figures in our paper. Although we are not able to share the raw Twitter data publicly, the aggregated counts per hexagon for each fashion keyword, with which all the results can be reproduced, are found in `analysis/data/derived_data/`. The steps taken to produce this aggregated dataset can be found in:
 
-> Authors, (YYYY). *Attentional Social Media: Mapping the Spaces and Networks of the Fashion Industry*. Name of journal/book, Accessed 26 Sep 2019. Online at <https://doi.org/xxx/xxx>
+-   [analysis/00a-hexagonal-grid-prep.Rmd](analysis/00a-hexagonal-grid-prep.md): Preparation of hexagonal global grid
+-   [analysis/00b-twitter-data-prep.Rmd](analysis/00b-twitter-data-prep.md): Read in raw Twitter data and perform spatial join to hexagonal grid
+-   [analysis/00c-twitter-data-group-totals.Rmd](analysis/00c-twitter-data-group-totals.md): Calculate odds ratios, diversity metrics and group totals for each hexagonal cell
+-   [analysis/00d-twitter-data-city-level.Rmd](analysis/00d-twitter-data-city-level.md): Prepare city-level data
+
+The steps needed to recreate the figures can be found in:
+
+-   [analysis/01-figures-global.Rmd](analysis/01-figures-global.md): Global figures
+-   [analysis/01-figures-cities.Rmd](analysis/01-figures-cities.md): City-level figures
 
 ### How to download or install
 
@@ -26,6 +34,6 @@ remotes::install_github("atepoorthuis/geography-of-fashion")
 
 ### Licenses
 
-\*\*Text, figures and <data:**> [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
+\*\*Text + figures and <data:**> [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
 
 **Code:** See the [DESCRIPTION](DESCRIPTION) file
