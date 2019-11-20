@@ -4,6 +4,7 @@ geographyoffashion
 ==================
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/atepoorthuis/geography-of-fashion/master?urlpath=rstudio)
+[![DOI](https://zenodo.org/badge/177507495.svg)](https://zenodo.org/badge/latestdoi/177507495)
 
 This repository contains the data and code for our paper:
 
